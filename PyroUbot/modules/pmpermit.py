@@ -153,6 +153,8 @@ async def handle_pmpermit(client, message):
     biji = message.from_user.mention
     chat_id = message.chat.id
     group = await izzy_meira(client)
+    if not group:
+        await meira(client)
     is_pm_guard_enabled = await get_vars(user_id, "ENABLE_PM_GUARD")
     if message.chat.id != 777000:
         if LOG_CHATS_.RECENT_USER != message.chat.id:
