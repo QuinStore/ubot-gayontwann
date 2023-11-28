@@ -55,19 +55,19 @@ async def ping_cmd(client, message):
     emot_2 = await get_vars(client.me.id, "EMOJI_UPTIME")
     emot_3 = await get_vars(client.me.id, "EMOJI_MENTION")
     emot_pong = emot_1 if emot_1 else "5269563867305879894"
-    emot_uptime = emot_2 if emot_2 else "6296210567451380293"
-    emot_mention = emot_3 if emot_3 else "6129740134729387095"
+    emot_uptime = emot_2 if emot_2 else "5316615057939897832"
+    emot_mention = emot_3 if emot_3 else "6226371543065167427"
     if client.me.is_premium:
         _ping = f"""
 <b><emoji id={emot_pong}>🏓</emoji> {ping_msg["pong"]}</b> <code>{str(delta_ping).replace('.', ',')} ms</code>
-<b><emoji id={emot_uptime}>😎</emoji> {ping_msg["uptime"]}</b> <code>{uptime}</code>
-<b><emoji id={emot_mention}>😎</emoji> {ping_msg["mention"]}:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
+<b><emoji id={emot_uptime}>⏰</emoji> {ping_msg["uptime"]}</b> <code>{uptime}</code>
+<b><emoji id={emot_mention}>👑</emoji> {ping_msg["mention"]}:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
 """
     else:
         _ping = f"""
 <b>❏ {ping_msg["pong"]}</b> <code>{str(delta_ping).replace('.', ',')} ms</code>
-<b>🏓{ping_msg["uptime"]}</b> <code>{uptime}</code>
-<b>😎{ping_msg["mention"]}:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
+<b>⏰{ping_msg["uptime"]}</b> <code>{uptime}</code>
+<b>👑{ping_msg["mention"]}:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
 """
     await message.reply(_ping)
 
