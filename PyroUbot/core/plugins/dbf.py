@@ -14,7 +14,8 @@ from PyroUbot import *
 
 async def prem_user(client, message):
     Tm = await message.reply("<b>ᴘʀᴏᴄᴇssɪɴɢ . . .</b>")
-    if message.from_user.id not in await get_seles() or not OWNER_ID:
+    seles = await get_seles
+    if message.from_user.id not in seles and message.from_user.id not in OWNER_ID:
         return await Tm.edit(
             "ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ᴀɴᴅᴀ ʜᴀʀᴜs ᴍᴇɴᴊᴀᴅɪ ʀᴇsᴇʟʟᴇʀ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ"
         )
