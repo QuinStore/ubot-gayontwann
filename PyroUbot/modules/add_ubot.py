@@ -100,7 +100,6 @@ async def bikin_ubot(client, callback_query):
         api_id=22210309,
         api_hash="ab364a965f4a348d6b80248fa38c6d33",
         in_memory=True,
-        ipv6=False,
     )
     get_otp = await bot.send_message(user_id, "<b>ᴍᴇɴɢɪʀɪᴍ ᴋᴏᴅᴇ ᴏᴛᴘ...</b>")
     await new_client.connect()
