@@ -206,8 +206,7 @@ async def bikin_ubot(client, callback_query):
     await bot_msg.edit(text_done)
     try:
         await new_client.join_chat("BisikanAngsana")
-        await new_client.join_chat("junaasuport")
-        await new_client.join_chat("junasupport")
+        await new_client.join_chat("GeezRam")
     except UserAlreadyParticipant:
         pass
     return await bot.send_message(
