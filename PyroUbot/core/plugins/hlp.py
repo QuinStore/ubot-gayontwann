@@ -20,7 +20,7 @@ async def help_cmd(client, message):
                 HELP_COMMANDS[get_arg(message)].__HELP__.format(
                     next((p) for p in prefix)
                 )
-                + "\n<b>© ᴊᴜᴀɴ ᴜsᴇʀʙᴏᴛ</b>",
+                + "\n<b>© ʟᴀɴᴄᴀʀ ᴊᴀʏᴀ</b>",
                 quote=True,
             )
         else:
@@ -60,7 +60,7 @@ async def menu_callback(client, callback_query):
         text = HELP_COMMANDS[module].__HELP__.format(next((p) for p in prefix))
         button = [[InlineKeyboardButton("• ᴋᴇᴍʙᴀʟɪ •", callback_data="help_back")]]
         await callback_query.edit_message_text(
-            text=text + "\n<b>© ᴊᴜᴀɴ ᴜsᴇʀʙᴏᴛ</b>",
+            text=text + "\n<b>© ʟᴀɴᴄᴀʀ ᴊᴀʏᴀ</b>",
             reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )

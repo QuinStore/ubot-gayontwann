@@ -138,7 +138,7 @@ class Ubot(Client):
             except Exception as e:
                 print(f"{me.id} gagal membuat group log error:{e}")
         else:
-            await self.send_message(log.id, "Juan Userbot Berhasil diaktifkan")
+            await self.send_message(log.id, "LANCAR JAYA Userbot Berhasil diaktifkan")
         print(f"- ({me.id}) - STARTED")
 
 
