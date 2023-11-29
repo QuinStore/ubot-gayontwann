@@ -3,6 +3,7 @@ import imghdr
 import os
 import random
 import shlex
+from PIL import Image
 from typing import Tuple
 from pyrogram.errors import *
 from pyrogram.raw.functions.messages import *
