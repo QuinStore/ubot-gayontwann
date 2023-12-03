@@ -93,7 +93,13 @@ async def broadcast_group_cmd(client, message):
                     await client.send_message(chat_id, send)
                 done += 1
             except FloodWait as e:
-                return await message.reply(f"ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛᴇʀᴋᴇɴᴀ ғʟᴏᴏᴅᴡᴀɪᴛ, sɪʟᴀʜᴋᴀɴ ᴛᴜɴɢɢᴜ {e.value}")
+                await message.reply(f"ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛᴇʀᴋᴇɴᴀ ғʟᴏᴏᴅᴡᴀɪᴛ, sɪʟᴀʜᴋᴀɴ ᴛᴜɴɢɢᴜ {e.value} ᴅᴇᴛɪᴋ\nɢᴄᴀsᴛ ᴀɴᴅᴀ ᴀᴋᴀɴ ᴛᴇʀᴋɪʀɪᴍ sᴇᴛᴇʟᴀʜ ғʟᴏᴏᴅ ᴡᴀɪᴛ,\nʜᴀʀᴀᴘ ʙᴇʀsᴀʙᴀʀ ᴅᴀɴ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ɢᴄᴀsᴛ sᴇʙᴇʟᴏᴍ ᴘʀᴏsᴇs sᴇʟᴇsᴀɪ")
+                asyncio.sleep(e.value)
+                if message.reply_to_message:
+                    await send.copy(chat_id)
+                else:
+                    await client.send_message(chat_id, send)
+                done += 1
             except Exception:
                 error += 1
 
