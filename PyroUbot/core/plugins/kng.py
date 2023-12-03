@@ -83,7 +83,7 @@ async def resize_media(media: str, video: bool, fast_forward: bool) -> str:
     os.remove(media)
     return resized_photo
 
-async def kang_cmd_bot(client, message):
+async def kang_cmd_bot(client: Client, message: Message):
     user = client.me
     replied = message.reply_to_message
     um = await message.edit_text("<code>ᴘʀᴏᴄᴇssɪɴɢ . . .</code>")
@@ -130,7 +130,7 @@ async def kang_cmd_bot(client, message):
         else:
             await um.edit("ғᴏʀᴍᴀᴛ ᴛɪᴅᴀᴋ ᴅɪᴅᴜᴋᴜɴɢ")
             return
-        media_ = await client.download_media(replied, file_name="downloads/")
+        media_ = await client.download_media(replied, file_name="PyroUbot/resources/")
     else:
         await um.edit("ʙᴀʟᴀs ᴋᴇ sᴛɪᴋᴇʀ ᴀᴛᴀᴜ ᴍᴇᴅɪᴀ")
         return
@@ -202,7 +202,7 @@ async def kang_cmd_bot(client, message):
                 await client.unblock_user("stickers")
                 await client.send_message("stickers", "/addsticker")
             except Exception as e:
-                return await message.edit(f"**ERROR:** `{e}`")
+                return await client.edit(f"**ERROR:** `{e}`")
             await asyncio.sleep(2)
             await client.send_message("stickers", packname)
             await asyncio.sleep(2)
@@ -218,9 +218,9 @@ async def kang_cmd_bot(client, message):
                     packname += "_video"
                     packnick += " (Video)"
                 await um.edit(
-                    "ᴍᴇᴍʙᴜᴀᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ ʙᴀʀᴜ"
+                    "`Create a New Sticker Pack "
                     + str(pack)
-                    + "ᴛᴇʟᴀʜ ғᴜʟʟ"
+                    + " Because the sticker pack is full`"
                 )
                 await client.send_message("stickers", packname)
                 await asyncio.sleep(2)
@@ -255,14 +255,14 @@ async def kang_cmd_bot(client, message):
                 == "Sorry, the file type is invalid."
             ):
                 await um.edit(
-                    "ɢᴀɢᴀʟ ᴍᴇɴɢᴀᴍʙɪʟ sᴛɪᴋᴇʀ"
+                    "ɢᴀɢᴀʟ ᴍᴇɴɢᴀᴍʙɪʟ sᴛɪᴋᴇʀ, sɪʟᴀʜᴋᴀɴ ʙᴜᴀᴛ ᴍᴀɴᴜᴀʟ"
                 )
                 return
             await client.send_message("Stickers", emoji_)
             await asyncio.sleep(2)
             await client.send_message("Stickers", "/done")
         else:
-            await um.edit("ᴍᴇᴍʙᴜᴀᴛ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ ʙᴀʀᴜ")
+            await um.edit("`Create a New Sticker Pack`")
             try:
                 await client.send_message("Stickers", cmd)
             except YouBlockedUser:
@@ -278,7 +278,7 @@ async def kang_cmd_bot(client, message):
                 == "Sorry, the file type is invalid."
             ):
                 await um.edit(
-                    "ɢᴀɢᴀʟ ᴍᴇɴɢᴀᴍʙɪʟ sᴛɪᴋᴇʀ"
+                    "ɢᴀɢᴀʟ ᴍᴇɴɢᴀᴍʙɪʟ sᴛɪᴋᴇʀ, sɪʟᴀʜᴋᴀɴ ʙᴜᴀᴛ ᴍᴀɴᴜᴀʟ"
                 )
                 return
             await client.send_message("Stickers", emoji_)
@@ -299,10 +299,8 @@ async def kang_cmd_bot(client, message):
             os.remove(media_)
 
 
-async def get_response(client, message):
-    async for data in client.search_messages(bot.me.username, limit=1):
-        results = data
-    return results
+async def get_response(message, client):
+    return [x async for x in client.get_chat_history("Stickers", limit=1)][0].text
 
 
 async def delete_results(msg, send, reply_send, results):
