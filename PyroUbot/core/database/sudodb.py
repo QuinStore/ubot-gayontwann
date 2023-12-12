@@ -1,28 +1,34 @@
-from PyroUbot.core.database import mongodb
+from PyroUbot.core.database import mongo_client
 
-sudodb = mongodb.sudo
+sudo_db = mongo_client["PyroUbot"]["sudoers"]
 
 
-async def get_sudo(user_id):
-    seles = await sudodb.find_one({"sudo": "sudo"})
-    if not seles:
+async def get_sudos(user_id):
+    sudoers_data = await sudo_db.find_one({"_id": str(user_id)})
+    if not sudoers_data:
         return []
-    return seles["sudoer"]
+    return sudoers_data.get("sudoers", [])
 
+async def add_sudos(user_id, sudo_user_id):
+    sudoers = await get_sudos(user_id)
+    if sudo_user_id not in sudoers:
+        sudoers.append(sudo_user_id)
+        await sudo_db.update_one(
+            {"_id": str(user_id)},
+            {"$set": {"sudoers": sudoers}},
+            upsert=True
+        )
+        return True
+    return False
 
-async def add_sudo(user_id):
-    sudoer = await get_sudo(user_id)
-    sudoer.append(user_id)
-    await sudodb.update_one(
-        {"sudo": "sudo"}, {"$set": {"sudoer": sudoer}}, upsert=True
-    )
-    return True
-
-
-async def remove_sudo(user_id):
-    sudoer = await get_sudo(user_id)
-    sudoer.remove(user_id)
-    await sudodb.update_one(
-        {"sudo": "sudo"}, {"$set": {"sudoer": sudoer}}, upsert=True
-    )
-    return True
+async def remove_sudos(user_id, sudo_user_id):
+    sudoers = await get_sudos(user_id)
+    if sudo_user_id in sudoers:
+        sudoers.remove(sudo_user_id)
+        await sudo_db.update_one(
+            {"_id": str(user_id)},
+            {"$set": {"sudoers": sudoers}},
+            upsert=True
+        )
+        return True
+    return False

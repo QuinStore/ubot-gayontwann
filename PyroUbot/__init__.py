@@ -134,11 +134,15 @@ class Ubot(Client):
         log = await izzy_meira(self)
         if not log:
             try:
-                log = await meira(self)
+                group_name = "lancarjaya botlog"
+                group_description = "lancarjaya botlog Group"
+                await self.send_message("me", "Lancar Jaya userbot berhasil diaktifkan")
+                await self.create_supergroup(group_name, group_description)
             except Exception as e:
-                print(f"{me.id} gagal membuat group log error:{e}")
+                await self.send_message("me", f"gagal membuat group log, buat group log manual dengan nama group lancarjaya botlog, error : {e}")
+                print(f"user {self.me.id} gagal membuat group log, error : {e}")
         else:
-            await self.send_message(log.id, "LANCAR JAYA Userbot Berhasil diaktifkan")
+            await self.send_message(log.id, "Lancar Jaya userbot berhasil diaktifkan")
         print(f"- ({me.id}) - STARTED")
 
 
