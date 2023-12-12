@@ -13,7 +13,6 @@ juanuserbot v3
 
 async def start_ubot(user_id, _ubot):
     ubot_ = Ubot(**_ubot)
-    await load_sudoers(user_id)
     try:
         await asyncio.wait_for(ubot_.start(), timeout=60)
  
