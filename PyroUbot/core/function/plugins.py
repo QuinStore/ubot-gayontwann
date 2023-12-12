@@ -8,7 +8,6 @@ from PyroUbot import bot, ubot, SUDO_USERS
 from PyroUbot.config import OWNER_ID
 from PyroUbot.core.helpers import PY
 from PyroUbot.modules import loadModule
-from PyroUbot.core.database.sudodb import get_sudo, add_sudo
 
 HELP_COMMANDS = {}
 
@@ -46,8 +45,3 @@ async def loadPlugins():
 async def _(client, callback_query):
     await callback_query.message.delete()
 
-async def load_sudoers(user_id):
-    print("Loading sudoers")
-    existing_sudo = await get_sudo(user_id)
-    if existing_sudo:
-        SUDO_USERS.extend(existing_sudo)
