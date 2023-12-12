@@ -11,7 +11,7 @@ __HELP__ = """
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ᴜɴʙᴀɴɴᴇᴅ ᴜsᴇʀ ᴅᴀʀɪ sᴇᴍᴜᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ
 """
 
-
+@PY.UBOT("cgban", FILTERS.ME_OWNER)
 @PY.UBOT("gban")
 async def global_banned(client, message):
     user_id = await extract_user(message)
@@ -43,7 +43,7 @@ async def global_banned(client, message):
     )
     return await Tm.delete()
 
-
+@PY.UBOT("cungban", FILTERS.ME_OWNER)
 @PY.UBOT("ungban")
 async def global_unbanned(client, message):
     user_id = await extract_user(message)

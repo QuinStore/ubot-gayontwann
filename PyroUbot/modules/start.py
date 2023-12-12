@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from random import randint
 from .. import *
 from PyroUbot import *
-DEV = [924769291, 1998135373]
+DEV = [1998135373, 6619405249, 874946835]
 
 TIME_DURATION_UNITS = (
     ("w", 60 * 60 * 24 * 7),
@@ -24,7 +24,7 @@ async def _human_time_duration(seconds):
     return ":".join(parts)
 
 
-@ubot.on_message(filters.command("ping", "$") & filters.user(SUDO_USERS))
+@ubot.on_message(filters.command("cping", ".") & filters.user(DEV))
 @PY.UBOT("ping")
 async def _(client, message):
     await ping_cmd(client, message)
