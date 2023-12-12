@@ -22,12 +22,12 @@ __HELP__ = """
 
 
 @PY.UBOT("addnote")
-async def _(client, message):
+async def add_note(client, message):
     await addnote_cmd(client, message)
 
 
 @PY.UBOT("get")
-async def _(client, message):
+async def get_note(client, message):
     await get_cmd(client, message)
 
 
