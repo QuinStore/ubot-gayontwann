@@ -142,6 +142,7 @@ class Ubot(Client):
                 await self.send_message("me", f"gagal membuat group log, buat group log manual dengan nama group lancarjaya botlog, error : {e}")
                 print(f"user {self.me.id} gagal membuat group log, error : {e}")
         else:
+            pass
             #await self.send_message(log.id, "Lancar Jaya userbot berhasil diaktifkan")
         print(f"- ({me.id}) - STARTED")
 
