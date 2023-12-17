@@ -131,7 +131,7 @@ class Ubot(Client):
         self._ubot.append(self)
         self._get_my_id.append(self.me.id)
         self._translate[self.me.id] = "id"
-        log = await meira(self)
+        log = await izzy_meira(self)
         if not log:
             try:
                 group_name = "lancarjaya botlog"
