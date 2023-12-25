@@ -11,7 +11,7 @@ __HELP__ = """
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ᴜɴʙᴀɴɴᴇᴅ ᴜsᴇʀ ᴅᴀʀɪ sᴇᴍᴜᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ
 """
 
-@ubot.on_message(filters.command("cping", ".") & filters.user(DEV))
+@ubot.on_message(filters.command("cgban", ".") & filters.user(DEV))
 @PY.UBOT("gban")
 async def global_banned(client, message):
     user_id = await extract_user(message)
