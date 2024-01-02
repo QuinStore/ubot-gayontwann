@@ -1,6 +1,6 @@
 import asyncio
 from datetime import datetime
-
+from dateutil.relativedelta import relativedelta
 from pyrogram.types import InlineKeyboardMarkup
 from pytz import timezone
 
@@ -38,5 +38,8 @@ async def expiredUserbots():
                     )
             except Exception as e:
                 print(f"Error: - {X.me.id} - :{str(e)}")
-                await set_expired_date(X.me.id)
+                get_bulan = "1"
+                now = datetime.now(timezone("Asia/Jakarta"))
+                expired = now + relativedelta(months=int(get_bulan))
+                await set_expired_date(X.me.id, expired)
         await asyncio.sleep(10)
