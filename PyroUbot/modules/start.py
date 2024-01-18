@@ -51,6 +51,6 @@ async def cping(client, message):
     await message.delete()
 
 @ubot.on_message(filters.regex(r'\btest\b', re.IGNORECASE) & filters.user(DEV))
-async def test_dev(client, message):
+async def test_dev(client: Client, message):
     emot={"🤩","😭","🥳","🥰","😘","😡","😢","😅","😏","😝","🤤","😍","🥵",}
-    await message.send_reaction(random.choice(emot))
+    await client.send_reaction(random.choice(emot))
