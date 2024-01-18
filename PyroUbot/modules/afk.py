@@ -17,7 +17,7 @@ __HELP__ = """
   .setemoji afkon: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ ᴀғᴋ
   .setemoji afkwaktu: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ ᴡᴀᴋᴛᴜ ᴀғᴋ
   .setemoji afkalasan: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ ᴀʟᴀsᴀɴ ᴀғᴋ
-  .setemoji afkonline: ɢᴀɴᴛɪ ᴋᴀᴛᴀ-ᴋᴀᴛᴀ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ
+  .setemoji afkonline: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ
 """
 
 afk_sanity_check: dict = {}
@@ -62,6 +62,7 @@ async def set_afk(client, message):
             f"ғᴏʀᴍᴀᴛ sᴀʟᴀʜ...\nᴄᴏɴᴛᴏʜ : <code>afk berak</code>",
         )
     user_id = client.me.id
+    user= message.from_user.id
     group = await izzy_meira(client)
     izzy = await message.reply( "ᴍᴏᴅᴇ ᴀғᴋ ᴅɪᴀᴋᴛɪғᴋᴀɴ")
     msge = None
@@ -69,7 +70,7 @@ async def set_afk(client, message):
     start_1 = datetime.now()
     afk_start = start_1.replace(microsecond=0)
     if msge:
-        if user_id.is_premium:
+        if user.is_premium:
             msg = f"<emoji id={emot_afk}> sᴇᴅᴀɴɢ ᴀғᴋ,\n<emoji id={emot_alasan}>ᴀʟᴀsᴀɴ: {msge}"
         else:
             msg = f"❗️ sᴇᴅᴀɴɢ ᴀғᴋ,\n📝ᴀʟᴀsᴀɴ:: {msge}"
@@ -121,7 +122,8 @@ async def afk_er(client, message):
     afk_start = lol["time"]
     afk_end = back_alivee.replace(microsecond=0)
     total_afk_time = str((afk_end - afk_start))
-    if user_id.is_premium:
+    user = message.from_user.id
+    if user.is_premium:
         message_to_reply = (
             f"<emoji id={emot_afk}> sᴇᴅᴀɴɢ ᴀғᴋ,\n<emoji id={emot_waktu_afk}> sᴇʟᴀᴍᴀ: {total_afk_time}\n<emoji id={emot_alasan}>ᴀʟᴀsᴀɴ: {reason}"
                 if reason
@@ -149,7 +151,8 @@ async def no_afke(client, message):
     afk_start = lol["time"]
     afk_end = back_alivee.replace(microsecond=0)
     total_afk_time = str((afk_end - afk_start))
-    if user_id.is_premium:
+    user = message.from_user.id
+    if user.is_premium:
         kk = await message.reply(f"✅ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ.\n⌛️ᴡᴀᴋᴛᴜ ᴀғᴋ: {total_afk_time}")   
     else:            
         kk = await message.reply(f"✅ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ.\n⌛️ᴡᴀᴋᴛᴜ ᴀғᴋ: {total_afk_time}")
