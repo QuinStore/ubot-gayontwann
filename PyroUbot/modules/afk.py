@@ -2,7 +2,7 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 from PyroUbot.core.database.afk import check_afk, go_afk, no_afk
-from PyroUbot.core.botlogs import izzy_meira
+from PyroUbot.core.helpers.botlogs import izzy_meira
 from PyroUbot.core.database.variabel import get_vars, set_vars
 from PyroUbot import PY, ubot
 
