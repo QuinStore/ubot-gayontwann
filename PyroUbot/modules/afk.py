@@ -70,7 +70,7 @@ async def set_afk(client, message):
     start_1 = datetime.now()
     afk_start = start_1.replace(microsecond=0)
     if msge:
-        if user.is_premium:
+        if client.me.is_premium:
             msg = f"<emoji id={emot_afk}> sᴇᴅᴀɴɢ ᴀғᴋ,\n<emoji id={emot_alasan}>ᴀʟᴀsᴀɴ: {msge}"
         else:
             msg = f"❗️ sᴇᴅᴀɴɢ ᴀғᴋ,\n📝ᴀʟᴀsᴀɴ:: {msge}"
@@ -123,7 +123,7 @@ async def afk_er(client, message):
     afk_end = back_alivee.replace(microsecond=0)
     total_afk_time = str((afk_end - afk_start))
     user = message.from_user.id
-    if user.is_premium:
+    if client.me.is_premium:
         message_to_reply = (
             f"<emoji id={emot_afk}> sᴇᴅᴀɴɢ ᴀғᴋ,\n<emoji id={emot_waktu_afk}> sᴇʟᴀᴍᴀ: {total_afk_time}\n<emoji id={emot_alasan}>ᴀʟᴀsᴀɴ: {reason}"
                 if reason
@@ -152,7 +152,7 @@ async def no_afke(client, message):
     afk_end = back_alivee.replace(microsecond=0)
     total_afk_time = str((afk_end - afk_start))
     user = message.from_user.id
-    if user.is_premium:
+    if client.me.is_premium:
         kk = await message.reply(f"✅ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ.\n⌛️ᴡᴀᴋᴛᴜ ᴀғᴋ: {total_afk_time}")   
     else:            
         kk = await message.reply(f"✅ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ.\n⌛️ᴡᴀᴋᴛᴜ ᴀғᴋ: {total_afk_time}")
