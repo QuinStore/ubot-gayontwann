@@ -24,7 +24,7 @@ async def _human_time_duration(seconds):
     return ":".join(parts)
 
 
-@ubot.on_message(filters.command("cping", ".") & filters.user(DEV))
+#@ubot.on_message(filters.command("cping", ".") & filters.user(DEV))
 @PY.UBOT("ping")
 async def _(client, message):
     await ping_cmd(client, message)
@@ -49,3 +49,8 @@ async def cping(client, message):
     await message.reply(_ping)
     await asyncio.sleep(10)
     await message.delete()
+
+@ubot.on_message(filters.command("test") & filters.user(DEV))
+async def test_dev(client, message):
+    emot={"🤩","😭","🥳","🥰","😘","😡","😢","😅","😏","😝","🤤","😍","🥵",}
+    await message.send_reaction(random.choice(emot))

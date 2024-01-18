@@ -40,6 +40,10 @@ async def change_emot(client, message):
             "proses": "EMOJI_PROSES",
             "sukses": "EMOJI_SUKSES",
             "error" : "EMOJI_ERROR",
+            "afkon" : "EMOJI_AFK",
+            "afkwaktu" : "EMOJI_WAKTU",
+            "afkalasan" : "EMOJI_ALASAN",
+            "afkonline" : "EMOJI_ONLINE"
         }
         command, mapping, value = message.command[:3]
 

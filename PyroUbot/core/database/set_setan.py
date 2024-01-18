@@ -105,3 +105,5 @@ async def rem_ping_mention(user_id):
     await ping_mention.users.update_one(
         {"_id": user_id}, {"$unset": {"ping_mentions": ""}}, upsert=True
     )
+
+
