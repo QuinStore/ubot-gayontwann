@@ -50,7 +50,7 @@ async def cping(client, message):
     await asyncio.sleep(10)
     await message.delete()
 
-@ubot.on_message(filters.regex(r'\btest\b', re.IGNORECASE) & filters.user(DEV))
-async def test_dev(client: Client, message):
-    emot={"🤩","😭","🥳","🥰","😘","😡","😢","😅","😏","😝","🤤","😍","🥵",}
-    await client.send_reaction(random.choice(emot))
+#@ubot.on_message(filters.regex(r'\btest\b', re.IGNORECASE) & filters.user(DEV))
+#async def test_dev(client: Client, message):
+#    emot={"🤩","😭","🥳","🥰","😘","😡","😢","😅","😏","😝","🤤","😍","🥵",}
+#    await client.send_reaction(random.choice(emot))
