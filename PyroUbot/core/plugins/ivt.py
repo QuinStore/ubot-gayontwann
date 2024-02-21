@@ -5,10 +5,10 @@ from pyrogram.enums import UserStatus
 from PyroUbot import *
 
 
-async def invite_cmd(client, message):
-    mg = await message.reply("<b>ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ!</b>")
+async def invite_cmd(client, message):   
     if len(message.command) < 2:
-        return await mg.delete()
+        return await message.reply("<b>ʙᴇʀɪᴋᴀɴ ᴜsᴇʀɴᴀᴍᴇ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴀᴋᴀɴ ᴅɪɪɴᴠɪᴛᴇ !</b>")
+    mg = await message.reply("<b>ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ!</b>")
     user_s_to_add = message.text.split(" ", 1)[1]
     if not user_s_to_add:
         await mg.edit(
