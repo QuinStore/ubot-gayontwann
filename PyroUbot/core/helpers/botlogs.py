@@ -8,6 +8,7 @@ async def izzy_meira(client):
     return None
 
 async def meira(client):
+    group = {}
     group_name = "lancarjaya botlog"
     group_description = "lancarjaya botlog Group"
     #group = await izzy_meira(client)
