@@ -8,10 +8,10 @@ async def izzy_meira(client):
     return None
 
 async def meira(client):
-    group = {}
+    #group = {}
     group_name = "lancarjaya botlog"
     group_description = "lancarjaya botlog Group"
-    #group = await izzy_meira(client)
+    group = await izzy_meira(client)
     if group is None:
         try:
             group = await client.create_supergroup(group_name, group_description)
