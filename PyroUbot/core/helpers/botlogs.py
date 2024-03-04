@@ -3,6 +3,8 @@ async def izzy_meira(client):
     async for dialog in client.get_dialogs():
         if dialog.chat.title == group_name:
             return dialog.chat
+        else:
+            await meira(client)
     return None
 
 async def meira(client):
