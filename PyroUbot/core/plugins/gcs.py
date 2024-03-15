@@ -5,6 +5,7 @@ import random
 from gc import get_objects
 
 from pyrogram.errors import FloodWait
+from pyrogram.errors.exceptions import SlowmodeWait
 from PyroUbot.core.database.set_setan import set_gcast_process, set_gcast_sukses, get_gcast_process, get_gcast_sukses
 from PyroUbot import *
 
@@ -92,16 +93,15 @@ async def broadcast_group_cmd(client, message):
                 else:
                     await client.send_message(chat_id, send)
                 done += 1
-            except FloodWait as e:
-                await message.reply(f"ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛᴇʀᴋᴇɴᴀ ғʟᴏᴏᴅᴡᴀɪᴛ, sɪʟᴀʜᴋᴀɴ ᴛᴜɴɢɢᴜ {e.value} ᴅᴇᴛɪᴋ\nɢᴄᴀsᴛ ᴀɴᴅᴀ ᴀᴋᴀɴ ᴛᴇʀᴋɪʀɪᴍ sᴇᴛᴇʟᴀʜ ғʟᴏᴏᴅ ᴡᴀɪᴛ,\nʜᴀʀᴀᴘ ʙᴇʀsᴀʙᴀʀ ᴅᴀɴ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ɢᴄᴀsᴛ sᴇʙᴇʟᴏᴍ ᴘʀᴏsᴇs sᴇʟᴇsᴀɪ")
-                asyncio.sleep(e.value)
-                if message.reply_to_message:
-                    await send.copy(chat_id)
-                else:
-                    await client.send_message(chat_id, send)
-                done += 1
+                await asyncio.sleep(2)
+            except FloodWait:
+                continue
+            except SlowmodeWait:
+                continue
             except Exception:
-                error += 1
+                continue
+            except BaseException:
+                failed += 1
 
     await message.delete()
 
