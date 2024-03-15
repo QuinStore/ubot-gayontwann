@@ -1,7 +1,7 @@
 import asyncio
 
 from pyrogram import idle
-
+from pyrogram.errors import *
 from PyroUbot import *
 
 
@@ -24,7 +24,8 @@ async def start_ubot(user_id, _ubot):
         SessionRevoked,
         Unauthorized,
         UserDeactivated,
-        UserDeactivatedBan
+        UserDeactivatedBan,
+        ChannelPrivate
     ):
         await remove_ubot(user_id)
         session_file = f"{user_id}.session"
