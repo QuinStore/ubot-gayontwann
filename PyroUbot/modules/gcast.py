@@ -13,6 +13,9 @@ __HELP__ = """
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}fgcast</code> [ᴛᴇxᴛ/ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ/ᴍᴇᴅɪᴀ]
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ʟᴇᴡᴀᴛɪ ᴀɴᴛɪ ɢᴄᴀsᴛ ʙᴏᴛ
 
+  <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}spamg</code>[ᴊᴜᴍʟᴀʜ] [ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ]
+  <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ sᴘᴀᴍ ɢɪᴋᴇs ᴘᴇsᴀɴ ᴋᴇ ɢʀᴏᴜᴘ
+
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}bgcast</code> [ᴛᴇxᴛ/ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ/ᴍᴇᴅɪᴀ]
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ʟᴇᴡᴀᴛɪ ᴀɴᴛɪ ɢᴄᴀsᴛ ʙᴏᴛ
 
@@ -41,6 +44,10 @@ async def _(client, message):
 @PY.UBOT("setpong")
 async def _(client, message):
     await set_pong_message(client, message)
+
+@PY.UBOT("spamg")
+async def _(client, message):
+    await broadcast_group_spam(client, message)
 
 @PY.UBOT("setuptime")
 async def _(client, message):

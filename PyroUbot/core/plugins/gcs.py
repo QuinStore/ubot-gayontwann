@@ -312,3 +312,66 @@ async def blue_gcast(client, message):
         _sukses = f"{gcast_msg['sukses']}\n✅ {done} group\n❌ {error} group"
 
     return await message.reply(_sukses)        
+
+
+async def broadcast_group_spam(client, message):
+    emot_4 = await get_vars(client.me.id, "EMOJI_PROSES")
+    emot_5 = await get_vars(client.me.id, "EMOJI_SUKSES")
+    emot_6 = await get_vars(client.me.id, "EMOJI_ERROR")
+    emot_proses = emot_4 if emot_4 else "5972146261241892218"
+    emot_sukses = emot_5 if emot_5 else "5852871561983299073"
+    emot_error = emot_6 if emot_6 else "5852812849780362931"
+    user_id = message.from_user.id
+    gcast_msg = await load_gcast_messages(user_id)
+
+    send = message.reply_to_message
+    if not send:
+        return await message.edit("Balas ke pesan untuk melakukan spam.")
+
+    interval = message.text.split()
+    if len(interval) != 2 or not interval[1].isdigit():
+        return await message.reply("Berikan jumlah spam dalam angka setelah perintah.")
+
+    interval = int(interval[1])
+    
+    if client.me.is_premium:
+        _proses = f"<emoji id={emot_proses}>🔸</emoji> {gcast_msg['proses']}"
+    else:
+        _proses = gcast_msg["proses"]
+    
+    await message.reply(_proses)
+
+    if not send.text:
+        return await message.edit("Tidak dapat mengirim pesan tanpa teks.")
+
+    chats = await get_global_id(client, "group")
+    blacklist = await get_chat(client.me.id)
+    error = 0
+    done = 0
+    
+    for _ in range(interval):
+        for chat_id in chats:
+            if chat_id in blacklist:
+                continue
+            if chat_id not in blgc:
+                try:
+                    await send.copy(chat_id)
+                    done += 1
+                    await asyncio.sleep(2)
+                except FloodWait:
+                    continue
+                except SlowmodeWait:
+                    continue
+                except Exception:
+                    continue
+                except BaseException:
+                    failed += 1
+
+    await message.delete()
+
+    if client.me.is_premium:
+        _sukses = f"{gcast_msg['sukses']}\n<b><emoji id={emot_sukses}>✅</emoji></b> {done} group,\n<emoji id={emot_error}>❌</emoji> {error} group"
+    else:
+        _sukses = f"{gcast_msg['sukses']}\n✅ {done} ɢʀᴏᴜᴘ\n❌ {error} ɢʀᴏᴜᴘ"
+
+    return await message.reply(_sukses)
