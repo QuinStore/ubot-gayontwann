@@ -35,11 +35,11 @@ async def alive_query(client, inline_query):
             get_exp = await get_expired_date(my.me.id)
             exp = get_exp.strftime("%d-%m-%Y")
             if my.me.id == OWNER_ID:
-                status = "ʟᴀɴᴄᴀʀ ᴊᴀʏᴀ <code>[ꜰᴏᴜɴᴅᴇʀ]</code>"
+                status = "prem botv3 <code>[ꜰᴏᴜɴᴅᴇʀ]</code>"
             elif my.me.id in await get_seles():
-                status = "ʟᴀɴᴄᴀʀ ᴊᴀʏᴀ</b> <code>[ᴀᴅᴍɪɴ]</code>"
+                status = "prem botv3</b> <code>[ᴀᴅᴍɪɴ]</code>"
             else:
-                status = "ʟᴀɴᴄᴀʀ ᴊᴀʏᴀ</b>"
+                status = "prem botv3</b>"
             button = Button.alive(get_id)
             start = datetime.now()
             await my.invoke(Ping(ping_id=0))
