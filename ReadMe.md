@@ -1,5 +1,5 @@
 step:
-1. git clone https://github.com/nanahyper/userbot userbot
+1. git clone https://github.com/wndrzzka/ubot-gayontwann userbot
 - username : wndrzzka 
 - pass : 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
 
