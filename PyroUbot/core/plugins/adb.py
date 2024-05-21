@@ -97,8 +97,8 @@ async def bikin_ubot(client, callback_query):
     phone_number = phone.text
     new_client = Ubot(
         name=str(callback_query.id),
-        api_id=22210309,
-        api_hash="ab364a965f4a348d6b80248fa38c6d33",
+        api_id=28666323,
+        api_hash="4e65f5b7ebc8c503b0765a875655a389",
         in_memory=True,
     )
     get_otp = await bot.send_message(user_id, "<b>ᴍᴇɴɢɪʀɪᴍ ᴋᴏᴅᴇ ᴏᴛᴘ...</b>")
@@ -194,8 +194,8 @@ async def bikin_ubot(client, callback_query):
         )
     await add_ubot(
         user_id=int(new_client.me.id),
-        api_id=22210309,
-        api_hash="ab364a965f4a348d6b80248fa38c6d33",
+        api_id=28666323,
+        api_hash="4e65f5b7ebc8c503b0765a875655a389",
         session_string=session_string,
     )
     await set_uptime(new_client.me.id, time())
@@ -204,8 +204,8 @@ async def bikin_ubot(client, callback_query):
     text_done = f"<b>🔥 {bot.me.mention} ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪꜰᴋᴀɴ ᴅɪ ᴀᴋᴜɴ: <a href=tg://openmessage?user_id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a> > <code>{new_client.me.id}</code></b> "
     await bot_msg.edit(text_done)
     try:
-        await new_client.join_chat("BisikanAngsana")
-        await new_client.join_chat("GeezRam")
+        await new_client.join_chat("RoomPublicWann")
+        await new_client.join_chat("GayoUbotSupport")
     except UserAlreadyParticipant:
         pass
     return await bot.send_message(
