@@ -20,7 +20,7 @@ async def help_cmd(client, message):
                 HELP_COMMANDS[get_arg(message)].__HELP__.format(
                     next((p) for p in prefix)
                 )
-                + "\n<b>© prem botv3</b>",
+                + "\n<b>© GayoWann-Ubot V1 </b>",
                 quote=True,
             )
         else:
