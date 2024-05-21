@@ -1,7 +1,7 @@
 import pyrogram
 
 async def izzy_meira(client):
-    group_name = "lancarjaya botlog"
+    group_name = "Gayowann-ubot Logs"
     async for dialog in client.get_dialogs():
         if dialog.chat.title == group_name:
             return dialog.chat
@@ -9,8 +9,8 @@ async def izzy_meira(client):
 
 async def meira(client):
     #group = {}
-    group_name = "lancarjaya botlog"
-    group_description = "lancarjaya botlog Group"
+    group_name = "Gayowann-ubot Logs"
+    group_description = "Gayowann-ubot Logs"
     group = await izzy_meira(client)
     if group is None:
         try:
