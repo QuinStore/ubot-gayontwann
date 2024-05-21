@@ -50,7 +50,7 @@ class MSG:
  <b>├────• <code>085366293093</code></b>
 <b>🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: ʀᴘ {total}.000</b>
 <b>🗓️ ᴛᴏᴛᴀʟ ʙᴜʟᴀɴ: {bulan}</b> 
-OWNER: <a href=tg://openmessage?user_id={OWNER_ID}>ᴀᴅᴍɪɴ</a> 
+𝗢𝘄𝗻𝗲𝗿: <a href=tg://openmessage?user_id={OWNER_ID}>𝗢𝘄𝗻𝗲𝗿</a> 
 <b>✅ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴋᴏɴꜰɪʀᴍᴀsɪ ᴜɴᴛᴜᴋ ᴋɪʀɪᴍ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ</b>
 """
 
