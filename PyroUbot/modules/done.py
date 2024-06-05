@@ -6,7 +6,7 @@ __MODULE__ = "Done"
 __HELP__ = """
  <b>Bantuan Untuk Done</b>
 
-• <b>Perintah</b> : <code>{0}done</code> [name item] [harga] [pembayaran]
+• <b>Perintah</b> : <code>{0}done</code> <b>[name item] [harga] [pembayaran]</b>
 • <b>Penjelasan : konfirmasi pembayaran.</b>
 
 """
@@ -28,7 +28,7 @@ async def dunedun(client, message):
             f"「 𝗧𝗥𝗔𝗡𝗦𝗔𝗞𝗦𝗜 𝗕𝗘𝗥𝗛𝗔𝗦𝗜𝗟 」\n\n"
             f"📦 <b>Barang : {name_item}</b>\n"
             f"💸 <b>Nominal : {price}</b>\n"
-            f"🕰️<b>Waktu : ${time}</b>\n"
+            f"🕰️ <b>Waktu : {time}</b>\n"
             f"💬 <b>Payment : {payment}</b>\n\n"
             f"𝗧𝗲𝗿𝗶𝗺𝗮𝗸𝗮𝘀𝗶𝗵 𝗧𝗲𝗹𝗮𝗵 𝗢𝗿𝗱𝗲𝗿"
         )
