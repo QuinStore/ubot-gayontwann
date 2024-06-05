@@ -17,7 +17,7 @@ async def dunedun(client, message):
     try:
         args = message.text.split()
         if len(args) < 3:
-            await message.reply_text("<b>Usage: .done <name item> <price> >payment<</b>")
+            await message.reply_text("<b>Usage: .done <name item> <price> <payment></b>")
             return
         
         name_item = args[1]
