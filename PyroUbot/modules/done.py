@@ -4,10 +4,10 @@ from PyroUbot import *
 
 __MODULE__ = "Done"
 __HELP__ = """
- Bantuan Untuk Done
+ <b>Bantuan Untuk Done</b>
 
-• Perintah : <code>{0}done</code> [name item] [harga] [pembayaran]
-• Penjelasan : konfirmasi pembayaran.
+• <b>Perintah</b> : <code>{0}done</code> [name item] [harga] [pembayaran]
+• <b>Penjelasan : konfirmasi pembayaran.</b>
 
 """
 @PY.UBOT("done")
@@ -26,10 +26,10 @@ async def dunedun(client, message):
         time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         response = (
             f"「 𝗧𝗥𝗔𝗡𝗦𝗔𝗞𝗦𝗜 𝗕𝗘𝗥𝗛𝗔𝗦𝗜𝗟 」\n\n"
-            f"📦 <b>Barang : {name_item}<b>\n"
-            f"💸 <b>Nominal : {price}<b>\n"
-            f"🕰️<b>Waktu : ${time}<b>\n"
-            f"💬 <b>Payment : {payment}<b>\n\n"
+            f"📦 <b>Barang : {name_item}</b>\n"
+            f"💸 <b>Nominal : {price}</b>\n"
+            f"🕰️<b>Waktu : ${time}</b>\n"
+            f"💬 <b>Payment : {payment}</b>\n\n"
             f"𝗧𝗲𝗿𝗶𝗺𝗮𝗸𝗮𝘀𝗶𝗵 𝗧𝗲𝗹𝗮𝗵 𝗢𝗿𝗱𝗲𝗿"
         )
         await pler.edit(response)
