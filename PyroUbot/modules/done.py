@@ -1,25 +1,29 @@
+import asyncio
 import datetime
 from PyroUbot import *
 
 @PY.UBOT("done")
-async def done_command(message):
+async def dunedun(client, message):
+    pler = await message.reply("silahkan tunggu...")
+    await asyncio.sleep(3)
     try:
         args = message.text.split()
         if len(args) < 3:
-            message.reply_text("Usage: .done <name item> <price>")
+            await message.reply_text("Usage: .done <name item> <price>")
             return
         
         name_item = args[1]
         price = args[2]
-        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        payment = args[3]
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         response = (
             f"payment done\n\n"
             f"name item: {name_item}\n"
             f"date: {now}\n"
             f"price: {price}\n"
-            f"payment: Optional"
+            f"payment: {payment}"
         )
-        message.reply_text(response)
+        await pler.edit(response)
     
     except Exception as e:
-        message.reply_text(f"An error occurred: {e}")
+        await pler.edit(f"An error occurred: {e}")
