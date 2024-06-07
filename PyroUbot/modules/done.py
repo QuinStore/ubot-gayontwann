@@ -15,7 +15,7 @@ async def dunedun(client, message):
     pler = await message.reply("ᴘʀᴏᴄᴇssɪɴɢ...")
     await asyncio.sleep(3)
     try:
-        args = message.text.split(,)
+        args = message.text.split(',')
         if len(args) < 3:
             await message.reply_text("<b>Usage: .done <name item> <price> <payment></b>")
             return
