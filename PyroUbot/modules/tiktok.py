@@ -10,8 +10,6 @@ __HELP__ = """
 """
 @PY.UBOT("tiktok")
 async def _(client, message):
-    if message.fwd_from:
-        return
     d_link = message.pattern_match.group(1)
     if ".com" not in d_link:
         await message.edit("`Mohon Maaf, Saya Membutuhkan Link Video Tiktok Untuk Mendownload Nya`")
