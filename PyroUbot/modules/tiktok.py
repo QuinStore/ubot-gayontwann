@@ -10,7 +10,7 @@ __HELP__ = """
 """
 @PY.UBOT("tiktok")
 async def _(client, message):
-    d_link = message.pattern_match.group(1)
+    
      await message.edit("```Video Sedang Diproses.....```")
     chat = "@ttsavebot"
     async with bot.conversation(chat) as conv:
