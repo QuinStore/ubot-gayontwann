@@ -12,6 +12,21 @@ import traceback
 from base64 import b64decode
 from PyroUbot import *
 
+__MODULE__ = "download"
+__HELP__ = """
+ <b>Bantuan Untuk Download</b>
+
+• <b>Perintah</b> : <code>{0}tt</code> <b>[link nya]</b>
+• <b>Penjelasan : Download Vt No Vm</b>
+
+• <b>Perintah</b> : <code>{0}ig</code> <b>[link nya]</b>
+• <b>Penjelasan : Download Vidio Instagram</b>
+
+• <b>Perintah</b> : <code>{0}pint</code> <b>[link nya]</b>
+• <b>Penjelasan : Download Foto Pinterest</b>
+
+"""
+
 class TikTokDownloaderAPI:
     def __init__(self):
         pass
