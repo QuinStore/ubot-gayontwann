@@ -8,7 +8,7 @@ spam_taksdb = {}
 
 kontol = False
 
-__MODULE__ = "Spam 2"
+__MODULE__ = "spam 2"
 __HELP__ = """
  Bantuan Untuk Spam 2
 
