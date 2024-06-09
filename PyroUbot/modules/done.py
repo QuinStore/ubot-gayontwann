@@ -2,6 +2,15 @@ import asyncio
 import datetime
 from PyroUbot import *
 
+__MODULE__ = "Done"
+__HELP__ = """
+ <b>Bantuan Untuk Done</b>
+
+• <b>Perintah</b> : <code>{0}done</code> <b>[name item],[harga] [pembayaran],[payment]</b>
+• <b>Penjelasan : konfirmasi pembayaran.</b>
+
+"""
+
 @PY.UBOT("done")
 async def done_command(client, message):
     wannepep = await message.reply("memproses...")
