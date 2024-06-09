@@ -29,9 +29,8 @@ async def done_command(client, message):
         
         name_item = parts[0].strip()
         price = parts[1].strip()
-        payment = parts[2].strip() if len(parts) > 2 else "Lainnya"
-        
-        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        payment = parts[2].strip() if len(parts) > 2 else "Lainnya"        
+        time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         response = (
             f"「 𝗧𝗥𝗔𝗡𝗦𝗔𝗞𝗦𝗜 𝗕𝗘𝗥𝗛𝗔𝗦𝗜𝗟 」\n\n"
             f"📦 <b>Barang : {name_item}</b>\n"
