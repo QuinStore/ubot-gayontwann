@@ -19,4 +19,4 @@ async def install_my_peer(client):
 async def installPeer():
     tasks = [install_my_peer(client) for client in ubot._ubot]
     await asyncio.gather(*tasks, return_exceptions=True)
-    await bot.send_message(OWNER_ID, "✅ ʙᴏᴛ GayoWann-Ubot V1  ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪғᴋᴀɴ, ᴊᴀʏᴀ.. ᴊᴀʏᴀ .. ᴊᴀʏᴀᴀᴀ...")
+    await bot.send_message(OWNER_ID, "✅ ʙᴏᴛ ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1   ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪғᴋᴀɴ, ᴊᴀʏᴀ.. ᴊᴀʏᴀ .. ᴊᴀʏᴀᴀᴀ...")
