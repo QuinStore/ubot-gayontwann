@@ -6,7 +6,7 @@ from PyroUbot.core.helpers.botlogs import izzy_meira
 from PyroUbot.core.database.variabel import get_vars, set_vars
 from PyroUbot import PY, ubot
 
-__MODULE__ = "afk"
+__MODULE__ = "Afk"
 __HELP__ = """
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀғᴋ 』</b>
 
