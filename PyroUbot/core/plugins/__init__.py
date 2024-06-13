@@ -2,6 +2,8 @@ from PyroUbot.core.plugins.adb import *
 from PyroUbot.core.plugins.abs import *
 from PyroUbot.core.plugins.adm import *
 from PyroUbot.core.plugins.alv import *
+from PyroUbot.core.plugins.bwt import *
+from PyroUbot.core.plugins.prof import *
 from PyroUbot.core.plugins.anm import *
 from PyroUbot.core.plugins.asp import *
 from PyroUbot.core.plugins.btn import *
