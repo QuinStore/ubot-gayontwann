@@ -10,6 +10,6 @@ __HELP__ = f"""
   """
 
 
-@PY.UBOT("ipinfo", sudo=False)
+@PY.UBOT("ipinfo")
 async def _(client, message):
     await hacker_lacak_target(client, message)
