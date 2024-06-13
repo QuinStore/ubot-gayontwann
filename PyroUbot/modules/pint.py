@@ -4,7 +4,7 @@ import wget
 import requests
 import traceback
 from pyrogram import Client
-from Pyroubot import *
+from PyroUbot import *
 
 __MODULE__ = "pinterest"
 __HELP__ = """
