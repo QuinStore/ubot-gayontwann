@@ -10,7 +10,7 @@ __MODULE__ = "openai"
 __HELP__ = f"""
 <b>『 chat gpt 』</b>
 
-  <b>• perintah:</b> <code>{PREFIX[0]}ai</code>
+  <b>• perintah:</b> <code>.ai</code>
   <b>• penjelasan:</b> buat pertanyaan contoh .ai siapa nama presiden Indonesia
 """
 
