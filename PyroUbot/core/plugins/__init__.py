@@ -23,7 +23,6 @@ from PyroUbot.core.plugins.mmf import *
 from PyroUbot.core.plugins.mms import *
 from PyroUbot.core.plugins.nts import *
 from PyroUbot.core.plugins.ocr import *
-from PyroUbot.core.plugins.opi import *
 from PyroUbot.core.plugins.pgr import *
 from PyroUbot.core.plugins.pyn import *
 from PyroUbot.core.plugins.qrq import *
