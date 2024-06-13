@@ -6,7 +6,7 @@ import traceback
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "Instagram"
+__MODULE__ = "instagram"
 __HELP__ = """
  <b>Bantuan Untuk Instagram</b>
 
