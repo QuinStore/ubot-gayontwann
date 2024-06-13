@@ -1,16 +1,10 @@
-import re
 import os
 import bs4
-import sys
-import time
-import math
 import wget
-import random
-import base64
 import requests
 import traceback
-from base64 import b64decode
-from PyroUbot import *
+from pyrogram import Client
+from Pyroubot import *
 
 __MODULE__ = "pinterest"
 __HELP__ = """
@@ -64,8 +58,7 @@ class PinterestMediaDownloader:
 			new_m = sorted(m.values(), key=lambda s: s["width"]*s["height"], reverse=True)
 			
 			self.best_sizes.append(new_m[0])
-
-
+			
 #pinterest downloader
 @PY.UBOT("pint")
 async def pinterest(client, message):
