@@ -15,7 +15,7 @@ __HELP__ = f"""
 """
 
 
-@PY.UBOT("ai", sudo=False)
+@PY.UBOT("ai")
 async def chat_gpt(ubot, message):
     try:
         await ubot.send_chat_action(message.chat.id, ChatAction.TYPING)
