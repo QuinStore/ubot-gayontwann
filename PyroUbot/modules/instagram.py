@@ -10,7 +10,7 @@ __MODULE__ = "instagram"
 __HELP__ = """
  <b>Bantuan Untuk Instagram</b>
 
-• <b>Perintah</b> : <code>{0}insta</code> <b>[link]</b>
+• <b>Perintah</b> : <code>{0}ig</code> <b>[link]</b>
 • <b>Penjelasan : Downloader Vid Insta</b>
 
 """
@@ -125,7 +125,7 @@ class PinterestMediaDownloader:
 			
 			self.best_sizes.append(new_m[0])
 
-@PY.UBOT("insta")
+@PY.UBOT("ig")
 async def instacrot(client: Client, message):
     print("processing")
     if len(message.text.split()) < 2:
