@@ -1,7 +1,7 @@
 step:
 1. git clone https://github.com/wndrzzka/ubot-gayontwann userbot
 - username : wndrzzka 
-- pass : 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
+- pass : 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
 
 2. sudo apt update && sudo apt upgrade -y
 3. sudo apt install python3.10-venv ffmpeg
