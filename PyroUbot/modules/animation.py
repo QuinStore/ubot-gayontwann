@@ -30,10 +30,10 @@ __HELP__ = """
 """
 
 @PY.UBOT("bulan")
-async def bulan(message):
+async def bulan(client, message):
     animation_interval = 0.2
     animation_ttl = range(96)
-    await message.edit("wann ganteng..")
+    await message.edit("Wann Ganteng..")
     animation_chars = [
         "🌗",
         "🌘",
@@ -74,7 +74,7 @@ async def bulan(message):
 
 
 @PY.UBOT("sayang")
-async def wannganteng(message):
+async def izzyganteng(client, message):
     e = await message.edit("I LOVEE YOUUU 💕")
     await e.edit("💝💘💓💗")
     await e.edit("💞💕💗💘")
@@ -102,7 +102,7 @@ async def wannganteng(message):
 
 
 @PY.UBOT("dyno")
-async def wanngantengbgt(message):
+async def izzygantengbgt(client, message):
     typew = await message.edit("`DIN DINNN.....`")
     sleep(1)
     await typew.edit("`DINOOOOSAURUSSSSS!!`")
@@ -159,7 +159,7 @@ async def wanngantengbgt(message):
 
 
 @PY.UBOT("gabut")
-async def wannemangganteng(message):
+async def izzyemangganteng(client, message):
     e = await message.edit("`PERNAAHHHHH KAHHH KAUUU MENGIRA`")
     await e.edit("`SEPEEERTIIIII APAAAA BENTUKKKKKKK CINTAAAA`")
     await e.edit("`RAMBUUUT WARNAAA WARNII`")
@@ -415,7 +415,7 @@ async def wannemangganteng(message):
 
 
 @PY.UBOT("terkadang")
-async def wannpalingganteng(message):
+async def izzypalingganteng(client, message):
     typew = await message.edit("`Terkadang`")
     sleep(1)
     await typew.edit("`Mencintai Seseorang`")
@@ -433,12 +433,12 @@ async def wannpalingganteng(message):
 
 
 @PY.UBOT("mf")
-async def wanngantengsekali(message):
+async def izzygantengsekali(client, message):
     await message.edit( "`mf g dl` **ミ(ノ;_ _)ノ=3** ")
 
 
 @PY.UBOT("cinta")
-async def wannemangpalingganteng(message):
+async def izzyemangpalingganteng(client, message):
     animation_chars = [
             "`Connecting Ke Server Cinta`",
             "`Mencari Target Cinta`",
