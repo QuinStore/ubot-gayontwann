@@ -30,7 +30,7 @@ __HELP__ = """
 """
 
 @PY.UBOT("gombal")
-async def pokonyawannpalinggantengkaloinidiapusnantieror(message):
+async def pokonyaizzypalinggantengkaloinidiapusnantieror(client, message):
     typew = message.edit("`Hai, I LOVE YOU 💞`")
     sleep(1)
     await typew.edit("`I LOVE YOU SO MUCH!`")
@@ -56,7 +56,7 @@ async def pokonyawannpalinggantengkaloinidiapusnantieror(message):
 
 
 @PY.UBOT("helicopter")
-async def apalagiinijangandiapuscumamaobilangwannganteng(message):
+async def apalagiinijangandiapuscumamaobilangizzyganteng(client, message):
     await message.edit(
         "▬▬▬.◙.▬▬▬ \n"
         "═▂▄▄▓▄▄▂ \n"
@@ -78,14 +78,14 @@ async def apalagiinijangandiapuscumamaobilangwannganteng(message):
 
 
 @PY.UBOT("tembak")
-async def inijugajangandiapusataudigantikrnwannganteng(message):
+async def inijugajangandiapusataudigantikrnizzyganteng(client, message):
     await message.edit(
         "_/﹋\\_\n" "(҂`_´)\n" "<,︻╦╤─ ҉\n" r"_/﹋\_" "\n**Mau Jadi Pacarku Gak?!**",
     )
 
 
 @PY.UBOT("bundir")
-async def biarpanjangajayangpentingwannganteng(message):
+async def biarpanjangajayangpentingizzyganteng(client, message):
     await message.edit(
         "`Dadah Semuanya...`          \n　　　　　|"
         "\n　　　　　| \n"
@@ -105,7 +105,7 @@ async def biarpanjangajayangpentingwannganteng(message):
 
 
 @PY.UBOT("awk")
-async def biarmampuslusemuakontol(message):
+async def biarmampuslusemuakontol(client, message):
     await message.edit(
         "────██──────▀▀▀██\n"
         "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
@@ -116,7 +116,7 @@ async def biarmampuslusemuakontol(message):
 
 
 @PY.UBOT("ular")
-async def ularnagapanajnagnyabukankepalangtapiwanngantengamat(message):
+async def ularnagapanajnagnyabukankepalangtapiizzygantengamat(client, message):
     await message.edit(
         "░░░░▓\n"
         "░░░▓▓\n"
@@ -207,7 +207,7 @@ async def ularnagapanajnagnyabukankepalangtapiwanngantengamat(message):
 
 
 @PY.UBOT("y")
-async def pelerpelerpeler(message):
+async def pelerpelerpeler(client, message):
     await message.edit(
         "‡‡‡‡‡‡‡‡‡‡‡‡▄▄▄▄\n"
         "‡‡‡‡‡‡‡‡‡‡‡█‡‡‡‡█\n"
