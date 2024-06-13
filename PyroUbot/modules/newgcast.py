@@ -7,7 +7,7 @@ __MODULE__ = "gcast new"
 __HELP__ = f"""
 <b>『 bantuan untuk gcastnew 』</b>
 
-  <b>• perintah:</b> <code>{PREFIX[0]}bc</code> gc balas ke pesan
+  <b>• perintah:</b> <code>.bc</code> gc balas ke pesan
   <b>• penjelasan:</b> gc[grup], adm[khusus admin], pv [private chat]
 
 """
