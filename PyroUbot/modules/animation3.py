@@ -24,7 +24,7 @@ __HELP__ = """
 """
 
 @PY.UBOT("tank")
-async def _(message):
+async def _(client, message):
     await message.edit(
         "█۞███████]▄▄▄▄▄▄▄▄▄▄▃ \n"
         "▂▄▅█████████▅▄▃▂…\n"
@@ -34,7 +34,7 @@ async def _(message):
 
 
 @PY.UBOT("babi")
-async def _(message):
+async def _(client, message):
     await message.edit(
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
         "┈┈┃┏┗┛┓┃╭┫Ngok ┃\n"
@@ -48,7 +48,7 @@ async def _(message):
 
 
 @PY.UBOT("anjing")
-async def _(message):
+async def _(client, message):
     await message.edit(
         "╥━━━━━━━━╭━━╮━━┳\n"
         "╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
@@ -60,7 +60,7 @@ async def _(message):
 
 
 @PY.UBOT("bernyanyi")
-async def _(message):
+async def _(client, message):
     typew = await message.edit("**Ganteng Doang Gak Bernyanyi (ง˙o˙)ว**")
     sleep(2)
     await typew.edit("**♪┗ ( ･o･) ┓♪┏ (・o･) ┛♪**")
@@ -95,7 +95,7 @@ async def _(message):
 
 
 @PY.UBOT("santet")
-async def _(message):
+async def _(client, message):
     typew = await message.edit("`Mengaktifkan Perintah Santet Online....`")
     sleep(2)
     await typew.edit("`Mencari Nama Orang Ini...`")
