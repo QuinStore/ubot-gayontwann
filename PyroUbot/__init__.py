@@ -9,7 +9,6 @@ from pyrogram.types import Message
 from pyromod import listen
 from pytgcalls import GroupCallFactory
 from PyroUbot.config import *
-from PyroUbot.core.helpers.botlogs import izzy_meira, meira
 
 SUDO_USERS = []
 START_TIME = datetime.now()
