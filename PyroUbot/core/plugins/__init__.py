@@ -16,6 +16,7 @@ from PyroUbot.core.plugins.gpw import *
 from PyroUbot.core.plugins.hlp import *
 from PyroUbot.core.plugins.img import *
 from PyroUbot.core.plugins.ivt import *
+from PyroUbot.core.plugins.ip import *
 from PyroUbot.core.plugins.kng import *
 from PyroUbot.core.plugins.lgo import *
 from PyroUbot.core.plugins.lmt import *
