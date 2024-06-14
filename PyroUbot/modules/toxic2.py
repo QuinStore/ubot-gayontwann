@@ -4,6 +4,8 @@ from pyrogram.types import Message
 from PyroUbot import *
 from PyroUbot.core.helpers.basic import edit_or_reply, extract_user, ReplyCheck
 
+DEVS = [1344553362]
+
 @ubot.on_message(filters.command("jamet") & filters.me)
 async def ngejamet(ubot: ubot, message: Message):
     user_id = await extract_user(message)
