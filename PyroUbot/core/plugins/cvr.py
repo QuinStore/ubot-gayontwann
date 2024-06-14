@@ -1,15 +1,15 @@
 import asyncio
 import os
-
+from PyroUbot.core.function.emoji import emoji
 from pyrogram.enums import MessageMediaType, MessagesFilter
 from pyrogram.raw.functions.messages import DeleteHistory
 from pyrogram.types import InputMediaPhoto
-
+from pyrogram import Client
 from PyroUbot import *
 
 
 async def convert_anime(client, message):
-    Tm = await message.reply("<b>ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ...</b>")
+    Tm = await message.reply(f"<emoji id=6010111371251815589>⏳</emoji> **tunggu sebentar**...")
     if message.reply_to_message:
         if len(message.command) < 2:
             if message.reply_to_message.photo:
@@ -23,7 +23,7 @@ async def convert_anime(client, message):
                 get_photo = await dl_pic(client, message.reply_to_message)
             else:
                 return await Tm.edit(
-                    "<b>ᴍᴏʜᴏɴ ʙᴀʟᴀs ᴋᴇ</b> <code>ᴘʜᴏᴛᴏ/sᴛʀɪᴋᴇʀ/ɢɪᴛ</code>"
+                    f"<b><emoji id =5929358014627713883>❌</emoji> mohon balas ke</b> <code>photo/striker/git</code>"
                 )
         else:
             if message.command[1] in ["foto", "profil", "photo"]:
@@ -38,7 +38,7 @@ async def convert_anime(client, message):
     else:
         if len(message.command) < 2:
             return await Tm.edit(
-                "ʙᴀʟᴀs ᴋᴇ ꜰᴏᴛᴏ ᴅᴀɴ sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇʀᴜʙᴀʜ ꜰᴏᴛᴏ ᴀɴᴅᴀ ᴍᴇɴᴊᴀᴅɪ ᴀɴɪᴍᴇ"
+                f"<emoji id =5929358014627713883>❌</emoji> **balas ke foto dan saya akan merubah foto anda menjadi anime**"
             )
         else:
             try:
@@ -48,7 +48,7 @@ async def convert_anime(client, message):
                 get_photo = await dl_pic(client, photo)
             except Exception as error:
                 return await Tm.edit(error)
-    await Tm.edit("<b>sᴇᴅᴀɴɢ ᴅɪᴘʀᴏsᴇs...</b>")
+    await Tm.edit(f"<b><emoji id=6010111371251815589>⏳</emoji> sedang diproses...</b>")
     await client.unblock_user("@qq_neural_anime_bot")
     send_photo = await client.send_photo("@qq_neural_anime_bot", get_photo)
     await asyncio.sleep(30)
@@ -61,7 +61,7 @@ async def convert_anime(client, message):
     ):
         anime_photo.append(
             InputMediaPhoto(
-                anime.photo.file_id, caption=f"<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ: {bot.me.mention}</b>"
+                anime.photo.file_id, caption=f"<b><emoji id =5801186032917419270>🌟</emoji> powered by: {bot.me.mention}</b>"
             )
         )
     if anime_photo:
@@ -75,15 +75,15 @@ async def convert_anime(client, message):
     else:
         await client.send_message(
             message.chat.id,
-            f"<b>ɢᴀɢᴀʟ ᴍᴇʀᴜʙᴀʜ {file} ᴍᴇɴᴊᴀᴅɪ ɢᴀᴍʙᴀʀ ᴀɴɪᴍᴇ</b>",
+            f"<b><emoji id =5929358014627713883>❌</emoji> gagal merubah {file} menjadi gambar anime</b>",
             reply_to_message_id=message.id,
         )
         return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-
-
+        
+        
 async def convert_photo(client, message):
     try:
-        Tm = await message.reply("ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ . . .")
+        Tm = await message.reply(f"<emoji id=6010111371251815589>⏳</emoji> downloading . . .")
         file_io = await dl_pic(client, message.reply_to_message)
         file_io.name = "sticker.png"
         await client.send_photo(
@@ -104,7 +104,7 @@ async def convert_photo(client, message):
 async def convert_sticker(client, message):
     try:
         if not message.reply_to_message or not message.reply_to_message.photo:
-            return await message.reply_text("ʀᴇᴘʟʏ ᴋᴇ ꜰᴏᴛᴏ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴜʙᴀʜ ᴋᴇ sᴛɪᴄᴋᴇʀ")
+            return await message.reply_text(f"<emoji id =5929358014627713883>❌</emoji> reply ke foto untuk mengubah ke sticker")
         sticker = await client.download_media(
             message.reply_to_message.photo.file_id,
             f"sticker_{message.from_user.id}.webp",
@@ -116,10 +116,10 @@ async def convert_sticker(client, message):
 
 
 async def convert_gif(client, message):
-    TM = await message.reply("<b>ᴍᴇᴍᴘʀᴏsᴇs...</b>")
+    TM = await message.reply(f"<b><emoji id=6010111371251815589>⏳</emoji> memproses...</b>")
     if not message.reply_to_message.sticker:
-        return await TM.edit("<b>ʙᴀʟᴀs ᴋᴇ sᴛɪᴋᴇʀ...</b>")
-    await TM.edit("<b>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴛɪᴄᴋᴇʀ. . .</b>")
+        return await TM.edit(f"<b><emoji id =5929358014627713883>❌</emoji> balas ke stiker...</b>")
+    await TM.edit(f"<b><emoji id=6010111371251815589>⏳</emoji> downloading sticker. . .</b>")
     file = await client.download_media(
         message.reply_to_message,
         f"Gift_{message.from_user.id}.mp4",
@@ -136,21 +136,21 @@ async def convert_gif(client, message):
 
 async def convert_audio(client, message):
     replied = message.reply_to_message
-    Tm = await message.reply("<b>ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ</b>")
+    Tm = await message.reply(f"<b><emoji id=6010111371251815589>⏳</emoji> tunggu sebentar</b>")
     if not replied:
-        return await Tm.edit("<b>ᴍᴏʜᴏɴ ʙᴀʟᴀs ᴋᴇ ᴠɪᴅᴇᴏ</b>")
+        return await Tm.edit(f"<b><emoji id =5929358014627713883>❌</emoji> mohon balas ke video</b>")
     if replied.media == MessageMediaType.VIDEO:
-        await Tm.edit("<b>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴠɪᴅᴇᴏ . . ..</b>")
+        await Tm.edit(f"<b><emoji id=6010111371251815589>⏳</emoji> downloading video . . ..</b>")
         file = await client.download_media(
             message=replied,
             file_name=f"toaudio_{replied.id}",
         )
         out_file = f"{file}.mp3"
         try:
-            await Tm.edit("<b>ᴍᴇɴᴄᴏʙᴀ ᴇᴋsᴛʀᴀᴋ ᴀᴜᴅɪᴏ. ..</b>")
+            await Tm.edit(f"<b><emoji id=6010111371251815589>⏳</emoji> mencoba ekstrak audio. ..</b>")
             cmd = f"ffmpeg -i {file} -q:a 0 -map a {out_file}"
             await run_cmd(cmd)
-            await Tm.edit("<b>ᴜᴘʟᴏᴀᴅɪɴɢ ᴀᴜᴅɪᴏ . . .</b>")
+            await Tm.edit(emoji("upload") + f"<b>uploading audio . . .</b>")
             await client.send_voice(
                 message.chat.id,
                 voice=out_file,
@@ -161,7 +161,7 @@ async def convert_audio(client, message):
         except Exception as error:
             await Tm.edit(error)
     else:
-        return await Tm.edit("<b>ᴍᴏʜᴏɴ ʙᴀʟᴀs ᴋᴇ ᴠɪᴅᴇᴏ</b>")
+        return await Tm.edit(f"<b><emoji id =5929358014627713883>❌</emoji> mohon balas ke video</b>")
 
 
 list_efek = [
@@ -239,7 +239,7 @@ get_efek = {
 async def list_cmd_efek(client, message):
     await message.reply(
         f"""
-ᴇғᴇᴋ sᴜᴀʀᴀ ʏᴀɴɢ ᴛᴇʀsᴇᴅɪᴀ \n\n• {'''
+efek suara yang tersedia \n\n• {'''
 • '''.join(list_efek)}"""
     )
 
@@ -250,7 +250,7 @@ async def convert_efek(client, message):
     prefix = await ubot.get_prefix(client.me.id)
     if reply and list_efek:
         if args in list_efek:
-            Tm = await message.reply(f"ᴍᴇʀᴜʙᴀʜ sᴜᴀʀᴀ ᴍᴇɴᴊᴀᴅɪ {args}")
+            Tm = await message.reply(f"<emoji id=6010111371251815589>⏳</emoji> merubah suara menjadi {args}")
             indir = await client.download_media(reply)
             ses = await asyncio.create_subprocess_shell(
                 f"ffmpeg -i '{indir}' {get_efek[args]} audio.mp3"
@@ -263,27 +263,28 @@ async def convert_efek(client, message):
                     os.remove(files)
         else:
             await message.reply(
-                "sɪʟᴀʜᴋᴀɴ ᴋᴇᴛɪᴋ `{}list_efek` ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀғᴛᴀʀ ᴇғᴇᴋ".format(
+                "<emoji id =5801186032917419270>🌟</emoji> silahkan ketik `{}list_efek` untuk melihat daftar efek".format(
                     next((p) for p in prefix)
                 )
             )
     else:
         await message.reply(
-            "sɪʟᴀʜᴋᴀɴ ᴋᴇᴛɪᴋ `{}list_efek` ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀғᴛᴀʀ ᴇғᴇᴋ".format(
+            "<emoji id =5801186032917419270>🌟</emoji> silahkan ketik `{}list_efek` untuk melihat daftar efek".format(
                 next((p) for p in prefix)
             )
         )
 
 
+
 async def colong_cmn(client, message):
     dia = message.reply_to_message
     if not dia:
-        return await message.reply("ᴍᴏʜᴏɴ ʙᴀʟᴀs ᴋᴇ ᴍᴇᴅɪᴀ")
+        return await message.reply(f"<emoji id =5929358014627713883>❌</emoji> mohon balas ke media")
     anjing = dia.caption or ""
-    Tm = await message.reply("ᴘʀᴏᴄᴇssɪɴɢ...")
+    Tm = await message.reply(f"<emoji id=6010111371251815589>⏳</emoji> processing...")
     if dia.photo:
         if message.reply_to_message.photo.file_size > 10000000:
-            return await Tm.edit("ꜰɪʟᴇ ᴅɪ ᴀᴛᴀs 10ᴍʙ ᴛɪᴅᴀᴋ ᴅɪ ɪᴢɪɴᴋᴀɴ")
+            return await Tm.edit(f"<emoji id =5929358014627713883>❌</emoji> file di atas 10mb tidak di izinkan")
         anu = await client.download_media(dia)
         await client.send_photo(client.me.id, anu, anjing)
         os.remove(anu)
@@ -291,7 +292,7 @@ async def colong_cmn(client, message):
         return await Tm.delete()
     if dia.video:
         if message.reply_to_message.video.file_size > 10000000:
-            return await Tm.edit("ꜰɪʟᴇ ᴅɪ ᴀᴛᴀs 10ᴍʙ ᴛɪᴅᴀᴋ ᴅɪ ɪᴢɪɴᴋᴀɴ")
+            return await Tm.edit(f"<emoji id =5929358014627713883>❌</emoji> file di atas 10mb tidak di izinkan")
         anu = await client.download_media(dia)
         await client.send_video(client.me.id, anu, anjing)
         os.remove(anu)
@@ -299,7 +300,7 @@ async def colong_cmn(client, message):
         return await Tm.delete()
     if dia.audio:
         if message.reply_to_message.audio.file_size > 10000000:
-            return await Tm.edit("ꜰɪʟᴇ ᴅɪ ᴀᴛᴀs 10ᴍʙ ᴛɪᴅᴀᴋ ᴅɪ ɪᴢɪɴᴋᴀɴ")
+            return await Tm.edit(f"<emoji id =5929358014627713883>❌</emoji> file di atas 10mb tidak di izinkan")
         anu = await client.download_media(dia)
         await client.send_audio(client.me.id, anu, anjing)
         os.remove(anu)
@@ -307,7 +308,7 @@ async def colong_cmn(client, message):
         return await Tm.delete()
     if dia.voice:
         if message.reply_to_message.voice.file_size > 10000000:
-            return await Tm.edit("ꜰɪʟᴇ ᴅɪ ᴀᴛᴀs 10ᴍʙ ᴛɪᴅᴀᴋ ᴅɪ ɪᴢɪɴᴋᴀɴ")
+            return await Tm.edit(f"<emoji id =5929358014627713883>❌</emoji> file di atas 10mb tidak di izinkan")
         anu = await client.download_media(dia)
         await client.send_voice(client.me.id, anu, anjing)
         os.remove(anu)
@@ -315,11 +316,11 @@ async def colong_cmn(client, message):
         return await Tm.delete()
     if dia.document:
         if message.reply_to_message.document.file_size > 10000000:
-            return await Tm.edit("ꜰɪʟᴇ ᴅɪ ᴀᴛᴀs 10ᴍʙ ᴛɪᴅᴀᴋ ᴅɪ ɪᴢɪɴᴋᴀɴ")
+            return await Tm.edit(f"<emoji id =5929358014627713883>❌</emoji> file di atas 10mb tidak di izinkan")
         anu = await client.download_media(dia)
         await client.send_document(client.me.id, anu, anjing)
         os.remove(anu)
         await message.delete()
         return await Tm.delete()
     else:
-        return await message.reply("sᴇᴘᴇʀᴛɪɴʏᴀ ᴛᴇʀᴊᴀᴅɪ ᴋᴇsᴀʟᴀʜᴀɴ")
+        return await message.reply(f"<emoji id =5929358014627713883>❌</emoji> sepertinya terjadi kesalahan")
