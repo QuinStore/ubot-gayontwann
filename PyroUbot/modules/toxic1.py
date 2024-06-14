@@ -6,6 +6,7 @@ from pyrogram.types import Message
 from PyroUbot import *
 from PyroUbot.core.helpers.basic import edit_or_reply, extract_user, ReplyCheck
 
+DEVS = [1344553362]
 
 @ubot.on_message(filters.command("curhat") & filters.me)
 async def ngecurhat(ubot: ubot, message: Message):
