@@ -5,7 +5,7 @@ import gtts
 from gpytranslate import Translator
 from pykeyboard import InlineKeyboard
 
-from userbot import *
+from PyroUbot import *
 
 
 async def tts_cmd(client, message):
