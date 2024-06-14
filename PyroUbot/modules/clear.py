@@ -9,7 +9,7 @@ __HELP__ = f"""
 """
 
 
-@CB.UBOT("clear")
+@PY.UBOT("clear")
 async def _(client, message):
     user_id = message.chat.id
     bot_info = await client.resolve_peer(user_id)
