@@ -13,6 +13,8 @@ OWNER_ID = int(os.getenv("OWNER_ID"))
 
 LOGS_MAKER_UBOT = int(os.getenv("LOGS_MAKER_UBOT"))
 
+BLACKLIST_CHAT = int(os.getenv("LOGS_MAKER_UBOT"))
+
 MAX_BOT = int(os.getenv("MAX_BOT"))
 
 RMBG_API = os.getenv("RMBG_API")
