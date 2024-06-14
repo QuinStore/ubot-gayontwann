@@ -5,8 +5,11 @@ from pyrogram.enums import ChatType
 from pyrogram.errors.exceptions import FloodWait
 
 from PyroUbot import *
-from PyroUbot.config import *
 from PyroUbot.core.function.emoji import emoji
+
+BLACKLIST_CHAT = [
+ -1002125842026
+]
 
 def get_message(message):
     msg = (
