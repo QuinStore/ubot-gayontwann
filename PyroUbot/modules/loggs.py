@@ -108,16 +108,16 @@ async def _(client, message):
         if not logs:
             await set_log_group(client.me.id, logger=True)
             await create_botlog(client)
-            ajg = await get_log(client)
-            babi = await client.export_chat_invite_link(int(ajg.id))
-            return await xx.edit(f"**Log Group Berhasil Diaktifkan :\n\n{babi}**")
+            log = await get_log(client)
+            grup = await client.export_chat_invite_link(int(log.id))
+            return await xx.edit(f"**Log Group Berhasil Diaktifkan :\n\n{grup}**")
         else:
             return await xx.edit(f"**Log Group anda Sudah aktif.**")
     if cek.lower() == "off":
         if logs:
             await del_log_group(client.me.id)
-            ajg = await get_log(client)
-            await client.delete_supergroup(int(ajg.id))
+            log = await get_log(client)
+            await client.delete_supergroup(int(log.id))
             return await xx.edit(f"**Log Group Berhasil Dinonaktifkan.**")
         else:
             return await xx.edit(f"**Log Group anda Sudah Dinonaktifkan.**")
