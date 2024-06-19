@@ -1,3 +1,10 @@
+import asyncio
+from pyrogram.enums import *
+from pyrogram.errors import FloodWait
+from pyrogram.types import *
+from PyroUbot.core.database.logger import *
+from PyroUbot import *
+
 
 __MODULE__ = "ʟᴏɢ"
 __HELP__ = """
@@ -9,15 +16,6 @@ bantuan untuk group logs
 - <code>{0}logger on</code> ->  mengaktifkan grup log.
 - <code>{0}logger off</code> ->  menonaktifkan grup log.
 """
-
-
-
-import asyncio
-from pyrogram.enums import *
-from pyrogram.errors import FloodWait
-from pyrogram.types import *
-from PyroUbot.core.database.logger import *
-from PyroUbot import *
 
 
 async def create_botlog(client):
@@ -34,7 +32,7 @@ async def create_botlog(client):
     )
     
 async def get_log(client):
-    name = "Dante Logs"
+    name = "Waanfyy Logs"
     async for dialog in client.get_dialogs():
         if dialog.chat.title == name:
             return dialog.chat
