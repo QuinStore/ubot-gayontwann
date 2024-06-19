@@ -1,4 +1,4 @@
-from userbot.core.database import mongodb
+from PyroUbot.core.database import mongodb
 
 logrupdb = mongodb.logger
 
