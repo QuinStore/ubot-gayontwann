@@ -166,13 +166,13 @@ async def handle_pmpermit(client, message):
                 )
                 LOG_CHATS_.COUNT = 0
             LOG_CHATS_.NEWPM = await client.send_message(
-                group.id,
+                botlog,
                 f"💌  <u>MENERUSKAN PESAN BARU</u> \n  • Dari :  {biji}\n  • User ID :   **{siapa} **\n",
                 parse_mode=enums.ParseMode.HTML,
             )
         try:
             async for pmlog in client.search_messages(message.chat.id, limit=1):
-                await pmlog.forward(group.id)
+                await pmlog.forward(botlog)
             LOG_CHATS_.COUNT += 1
         except BaseException:
             pass
