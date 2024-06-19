@@ -20,8 +20,8 @@ from userbot import *
 
 
 async def create_botlog(client):
-    name = "Dante Logs"
-    desc = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @Usern4meDoesNotExist404"
+    name = "Wannfyy Logs"
+    desc = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @wannoffc08"
     group = await client.create_supergroup(name, desc)
     nt = wget.download("https://mallucampaign.in/images/img_1713935923.jpg")
     photo_video = {"video": nt} if nt.endswith(".mp4") else {"photo": nt}
