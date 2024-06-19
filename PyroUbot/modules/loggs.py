@@ -16,7 +16,7 @@ import asyncio
 from pyrogram.enums import *
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
-from PyroUbot.core.database import *
+from PyroUbot.core.database.logger import *
 from PyroUbot import *
 
 
