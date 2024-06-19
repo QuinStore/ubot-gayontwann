@@ -3,6 +3,7 @@ from pyrogram.types import *
 from PyroUbot.core.database import *
 from PyroUbot.core.database.pmpermitdb import *
 from PyroUbot import *
+from PyroUbot.core.database.logger import *
 from pyroUbot.core.function.emoji import emoji
 
 PM_GUARD_WARNS_DB = {}
