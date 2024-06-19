@@ -20,7 +20,7 @@ pyromod==1.1
 pytz
 pymediainfo
 pymongo
-pyrogram
+https://github.com/Ev4ness/pyrogram-.git
 python-dateutil
 removebg
 requests
