@@ -16,7 +16,8 @@ import asyncio
 from pyrogram.enums import *
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
-from userbot import *
+from PyroUbot.core.database import *
+from PyroUbot import *
 
 
 async def create_botlog(client):
