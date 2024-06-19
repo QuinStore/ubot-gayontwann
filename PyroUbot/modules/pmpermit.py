@@ -4,7 +4,7 @@ from PyroUbot.core.database import *
 from PyroUbot.core.database.pmpermitdb import *
 from PyroUbot import *
 from PyroUbot.core.database.logger import *
-from pyroUbot.core.function.emoji import emoji
+from PyroUbot.core.function.emoji import emoji
 
 PM_GUARD_WARNS_DB = {}
 PM_GUARD_MSGS_DB = {}
