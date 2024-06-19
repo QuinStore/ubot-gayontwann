@@ -1,8 +1,9 @@
-from pyrogram import filters, Client, enums
-from pyrogram.types import Message
-from PyroUbot.core.database import set_vars, get_vars, remove_all_vars
-from PyroUbot.core.database.pmpermitdb import check_user_approved, add_approved_user, rm_approved_user
+from pyrogram import *
+from pyrogram.types import *
+from PyroUbot.core.database import *
+from PyroUbot.core.database.pmpermitdb import *
 from PyroUbot import *
+from pyroUbot.core.function.emoji import emoji
 
 PM_GUARD_WARNS_DB = {}
 PM_GUARD_MSGS_DB = {}
@@ -13,11 +14,11 @@ Saya adalah Userbot yang menjaga Room Chat Ini . Jangan Spam Atau Anda Akan Dibl
 
 PM_WARN = """
 Halo  {} 👋 .
-Pesan Keamanan Milik {} 👮!**
+Pesan Keamanan Milik {} 👮!
 
 {}
 
-**Anda memiliki `{}/{}` peringatan . Hati-hati !
+Anda memiliki `{}/{}` peringatan . Hati-hati !
 """
 
 LIMIT = 5
@@ -144,8 +145,7 @@ async def set_limit(client, message):
 
 
 @ubot.on_message(
-    filters.private & filters.incoming & ~filters.service & ~filters.me & ~filters.bot,
-    group=69,
+    filters.private & filters.incoming & ~filters.service & ~filters.me & ~filters.bot,group=1)
 )
 async def handle_pmpermit(client, message):
     user_id = client.me.id
