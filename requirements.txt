@@ -4,6 +4,7 @@ emoji==1.6.0
 python-dotenv
 attrify
 bs4
+uvloop
 dnspython
 GitPython
 gpytranslate
@@ -12,11 +13,11 @@ html2text
 motor
 opencv-python-headless
 openai
-Pillow==9.3.0
+Pillow==9.5.0
 psutil
 pykeyboard
 pySmartDL
-pyromod==1.1
+pyromod==1.5
 pytz
 pymediainfo
 pymongo
