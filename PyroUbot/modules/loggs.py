@@ -16,13 +16,12 @@ import asyncio
 from pyrogram.enums import *
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
-from PyroUbot import ubot
-from PyroUbot import *
+from userbot import *
 
 
 async def create_botlog(client):
-    name = "WannFyy Logs"
-    desc = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @wannoffc08"
+    name = "Dante Logs"
+    desc = "Jangan Keluar Dari Grup Log Ini\n\nPowered by: @Usern4meDoesNotExist404"
     group = await client.create_supergroup(name, desc)
     nt = wget.download("https://mallucampaign.in/images/img_1713935923.jpg")
     photo_video = {"video": nt} if nt.endswith(".mp4") else {"photo": nt}
@@ -34,7 +33,7 @@ async def create_botlog(client):
     )
     
 async def get_log(client):
-    name = "WannFyy Logs"
+    name = "Dante Logs"
     async for dialog in client.get_dialogs():
         if dialog.chat.title == name:
             return dialog.chat
