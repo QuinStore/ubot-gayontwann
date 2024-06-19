@@ -147,7 +147,6 @@ async def set_limit(client, message):
 
 @ubot.on_message(
     filters.private & filters.incoming & ~filters.service & ~filters.me & ~filters.bot,group=1)
-)
 async def handle_pmpermit(client, message):
     user_id = client.me.id
     siapa = message.from_user.id
