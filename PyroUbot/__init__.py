@@ -1,3 +1,7 @@
+import uvloop
+
+uvloop.install()
+
 import logging
 import os
 import re
@@ -22,10 +26,13 @@ class ConnectionHandler(logging.Handler):
 
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
+
 formatter = logging.Formatter("[%(levelname)s] - %(name)s - %(message)s", "%d-%b %H:%M")
 stream_handler = logging.StreamHandler()
+
 stream_handler.setFormatter(formatter)
 connection_handler = ConnectionHandler()
+
 logger.addHandler(stream_handler)
 logger.addHandler(connection_handler)
 
