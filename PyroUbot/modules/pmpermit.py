@@ -17,7 +17,8 @@ PM_WARN = """
 Halo  {} 👋 .
 Pesan Keamanan Milik {} 👮!
 
-{}
+☎️ halo, harap tunggu tuan saya membalas jika tuan saya tidak membalas jangan melakukan spam!
+Alasan : {}
 
 Anda memiliki `{}/{}` peringatan . Hati-hati !
 """
@@ -257,7 +258,7 @@ __HELP__ = """
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}no</code>
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴍᴇɴᴏʟᴀᴋ ᴘᴇsᴀɴ ᴅᴀɴ ʙʟᴏᴋɪʀ ᴘᴇɴɢɢᴜɴᴀ
 
-  <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}setmsg</code>
+  <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}setlimit</code>
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴍᴇɴɢᴀᴛᴜʀ ᴘᴇsᴀɴ ᴘᴍ ᴘᴇʀᴍɪᴛ
 
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}setmsg</code>
