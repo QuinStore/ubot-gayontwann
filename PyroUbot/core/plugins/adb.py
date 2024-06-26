@@ -1,7 +1,7 @@
 import asyncio
 import importlib
 from datetime import datetime
-from time import time
+from time import timej
 
 from pyrogram.enums import SentCodeType
 from pyrogram.errors import *
