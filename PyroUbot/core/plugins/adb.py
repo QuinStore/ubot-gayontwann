@@ -97,8 +97,8 @@ async def bikin_ubot(client, callback_query):
     phone_number = phone.text
     new_client = Ubot(
         name=str(callback_query.id),
-        api_id=28666323,
-        api_hash="4e65f5b7ebc8c503b0765a875655a389",
+        api_id=16760194,
+        api_hash="39906ecc98d0e8a1d7d91eda5daaf950",
         in_memory=True,
     )
     get_otp = await bot.send_message(user_id, "<b>ᴍᴇɴɢɪʀɪᴍ ᴋᴏᴅᴇ ᴏᴛᴘ...</b>")
@@ -194,8 +194,8 @@ async def bikin_ubot(client, callback_query):
         )
     await add_ubot(
         user_id=int(new_client.me.id),
-        api_id=28666323,
-        api_hash="4e65f5b7ebc8c503b0765a875655a389",
+        api_id=16760194,
+        api_hash="39906ecc98d0e8a1d7d91eda5daaf950",
         session_string=session_string,
     )
     await set_uptime(new_client.me.id, time())
