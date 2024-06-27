@@ -10,14 +10,8 @@ __HELP__ = """
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}gcast</code> [ᴛᴇxᴛ/ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ/ᴍᴇᴅɪᴀ]
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ᴋᴇ sᴇᴍᴜᴀ ɢʀᴏᴜᴘ
 
-  <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}fgcast</code> [ᴛᴇxᴛ/ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ/ᴍᴇᴅɪᴀ]
-  <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ʟᴇᴡᴀᴛɪ ᴀɴᴛɪ ɢᴄᴀsᴛ ʙᴏᴛ
-
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}spamg</code>[ᴊᴜᴍʟᴀʜ] [ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ]
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ sᴘᴀᴍ ɢɪᴋᴇs ᴘᴇsᴀɴ ᴋᴇ ɢʀᴏᴜᴘ
-
-  <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}bgcast</code> [ᴛᴇxᴛ/ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ/ᴍᴇᴅɪᴀ]
-  <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ʟᴇᴡᴀᴛɪ ᴀɴᴛɪ ɢᴄᴀsᴛ ʙᴏᴛ
 
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}send</code> [ᴜsᴇʀɪᴅ/ᴜsᴇʀɴᴀᴍᴇ - ᴛᴇxᴛ/ʀᴇᴘʟʏ]
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ᴋᴇ ᴜsᴇʀ/ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ
@@ -61,17 +55,7 @@ async def _(client, message):
 @PY.UBOT("gcast")
 async def _(client, message):
     await broadcast_group_cmd(client, message)
-
-@ubot.on_message(filters.command("bgcast", "$") & filters.user(SUDO_USERS))
-@PY.UBOT("bgcast")
-async def _(client, message):
-    await blue_gcast(client, message)
-
-@ubot.on_message(filters.command("fgcast", "$") & filters.user(SUDO_USERS))
-@PY.UBOT("fgcast")
-async def _(client, message):
-    await broadcast_cmd(client, message)
-
+  
 
 @PY.UBOT("ucast")
 async def _(client, message):
