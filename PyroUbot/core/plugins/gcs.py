@@ -101,26 +101,6 @@ async def broadcast_users_cmd(client, message):
             pass
 
     return await msg.edit(f"📊 ᴘᴇsᴀɴ ʙʀᴏᴀᴅᴄᴀsᴛ ᴀɴᴅᴀ ᴛᴇʀᴋɪʀɪᴍ ᴋᴇ `{done}` ɢʀᴏᴜᴘ" + emoji("done"))    
-    
-async def set_proses_message(client: Client, message: Message):
-    user_id = message.from_user.id
-    args = message.text.split(maxsplit=1)
-    if len(args) >= 2:
-        new_message = args[1]
-        await set_gcast_process(user_id, new_message)
-        await message.reply_text("ʙᴇʀʜᴀsɪʟ ᴜᴘᴅᴀᴛᴇ ᴘᴇsᴀɴ ᴘʀᴏsᴇs..")
-    else:
-        await message.reply_text("ғᴏʀᴍᴀᴛ sᴀʟᴀʜ, ɢᴜɴᴀᴋᴀɴ '.setproses <kata kata>'.")
-
-async def set_sukses_message(client: Client, message: Message):
-    user_id = message.from_user.id
-    args = message.text.split(maxsplit=1)
-    if len(args) >= 2:
-        new_message = args[1]
-        await set_gcast_sukses(user_id, new_message)
-        await message.reply_text("ʙᴇʀʜᴀsɪʟ ᴜᴘᴅᴀᴛᴇ ᴘᴇsᴀɴ sᴜᴋsᴇs")
-    else:
-        await message.reply_text("ғᴏʀᴍᴀᴛ sᴀʟᴀʜ, ɢᴜɴᴀᴋᴀɴ '.setsukses<kata kata>'")
 
 async def send_msg_cmd(client, message):
     if message.reply_to_message:
