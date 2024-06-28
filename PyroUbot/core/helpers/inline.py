@@ -84,6 +84,7 @@ class Button:
                 ],
                 [
                     InlineKeyboardButton("🤖 ʟɪsᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="cek_ubot"),
+                    InlineKeyboardButton("📡 ꜱᴘᴇᴋ ᴠᴘꜱ 📡", callback_data="host"),
                 ],
             ]
         return button
