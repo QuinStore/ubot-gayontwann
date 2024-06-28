@@ -19,7 +19,6 @@ pykeyboard
 pySmartDL
 pyromod==1.5
 pytz
-git+https://github.com/hakutakaid/pyrogram
 pymediainfo
 pymongo
 pyrogram
