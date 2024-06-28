@@ -10,7 +10,11 @@ import psutil
 
 from PyroUbot import *
 
-
+async def jumlah_user(client, message):
+    tt = await message.reply("sebentar proses...")
+    xx = len(ubot._ubot)
+    await tt.edit(f"jumlah pengguna userbot : {xx}")
+    
 async def shell_cmd(client, message):
     command = get_arg(message)
     msg = await message.reply("memproses...", quote=True)
