@@ -1,7 +1,7 @@
 from PyroUbot import *
 from pyrogram import filters
 from random import randint
-DEVS = [924769291, 1998135373]
+DEVS = [1344553362]
 
 
 
