@@ -176,6 +176,13 @@ async def cek_host(client, message):
     bt = datetime.fromtimestamp(boot_time_timestamp)
     softw += f"Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}\n"
 
+    svmem = psutil.virtual_memory()
+    softw += "\nMemori Digunakan\n"
+    softw += f"Total     : {get_size(svmem.total)}\n"
+    softw += f"available : {get_size(svmem.available)}\n"
+    softw += f"Used      : {get_size(svmem.used)}\n"
+    softw += f"Percentage: {svmem.percent}%\n"
+    
     softw += "\nInformasi CPU\n"
     softw += "Physical cores   : " + str(psutil.cpu_count(logical=False)) + "\n"
     softw += "Total cores      : " + str(psutil.cpu_count(logical=True)) + "\n"
@@ -193,13 +200,6 @@ async def cek_host(client, message):
     softw += f"Unggah  : {get_size(psutil.net_io_counters().bytes_sent)}\n"
     softw += f"Download: {get_size(psutil.net_io_counters().bytes_recv)}\n"
 
-    svmem = psutil.virtual_memory()
-    softw += "\nMemori Digunakan\n"
-    softw += f"Total     : {get_size(svmem.total)}\n"
-    softw += f"available : {get_size(svmem.available)}\n"
-    softw += f"Used      : {get_size(svmem.used)}\n"
-    softw += f"Percentage: {svmem.percent}%\n"
-
     await xx.edit(f"<b>{softw}</b>")
     
 async def vps(client, callback_query):
@@ -215,6 +215,13 @@ async def vps(client, callback_query):
     bt = datetime.fromtimestamp(boot_time_timestamp)
     softw += f"Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}\n"
 
+    svmem = psutil.virtual_memory()
+    softw += "\nMemori Digunakan\n"
+    softw += f"Total     : {get_size(svmem.total)}\n"
+    softw += f"available : {get_size(svmem.available)}\n"
+    softw += f"Used      : {get_size(svmem.used)}\n"
+    softw += f"Percentage: {svmem.percent}%\n"
+    
     softw += "\nInformasi CPU\n"
     softw += "Physical cores   : " + str(psutil.cpu_count(logical=False)) + "\n"
     softw += "Total cores      : " + str(psutil.cpu_count(logical=True)) + "\n"
