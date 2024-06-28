@@ -74,6 +74,9 @@ class Button:
                     InlineKeyboardButton("✨ ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="help_back"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", callback_data="support"),
                 ],
+                [
+                  InlineKeyboardButton("📡 ꜱᴘᴇᴋ ᴠᴘꜱ 📡", callback_data="host"),
+                ],
             ]
         else:
             button = [
