@@ -18,14 +18,6 @@ __HELP__ = """
   
 """
 
-@PY.UBOT("setproses")
-async def _(client, message):
-    await set_proses_message(client, message)
-
-@PY.UBOT("setsukses")
-async def _(client, message):
-    await set_sukses_message(client, message)
-
 @PY.UBOT("setpong")
 async def _(client, message):
     await set_pong_message(client, message)
