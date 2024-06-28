@@ -9,13 +9,7 @@ from PyroUbot import *
 
 # ========================== #
 # 𝔻𝔸𝕋𝔸𝔹𝔸𝕊𝔼 ℙℝ𝔼𝕄𝕀𝕌𝕄 #
-# ========================== #
-
-async def jumlah_user(client, message):
-    tt = await message.reply("sebentar proses...")
-    xx = len(ubot._ubot)
-    await tt.edit(f"jumlah pengguna userbot : {xx}")
-    
+# ========================== #    
 
 async def prem_user(client, message):
     Tm = await message.reply("<b>ᴘʀᴏᴄᴇssɪɴɢ . . .</b>")
