@@ -20,6 +20,7 @@ pySmartDL
 pyromod==1.5
 pytz
 git+https://github.com/hakutakaid/pyrogram
+--force-reinstall opencv-python
 pymediainfo
 pymongo
 pyrogram
