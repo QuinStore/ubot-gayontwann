@@ -158,7 +158,87 @@ def format_system_info(system_info):
     formatted_info += f"Percentage: {system_info['memory_percentage']}%\n"
     return f"<b>{Fonts.smallcap(formatted_info.lower())}</b>"
 
+async def cek_host(client, message):
+    xx = await message.reply("sebentar proses...")
+    uname = platform.uname()
+    softw = "Informasi Sistem\n"
+    softw += f"Sistem   : {uname.system}\n"
+    softw += f"Rilis    : {uname.release}\n"
+    softw += f"Versi    : {uname.version}\n"
+    softw += f"Mesin    : {uname.machine}\n"
 
+    boot_time_timestamp = psutil.boot_time()
+
+    bt = datetime.fromtimestamp(boot_time_timestamp)
+    softw += f"Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}\n"
+
+    softw += "\nInformasi CPU\n"
+    softw += "Physical cores   : " + str(psutil.cpu_count(logical=False)) + "\n"
+    softw += "Total cores      : " + str(psutil.cpu_count(logical=True)) + "\n"
+    cpufreq = psutil.cpu_freq()
+    softw += f"Max Frequency    : {cpufreq.max:.2f}Mhz\n"
+    softw += f"Min Frequency    : {cpufreq.min:.2f}Mhz\n"
+    softw += f"Current Frequency: {cpufreq.current:.2f}Mhz\n\n"
+    softw += "CPU Usage Per Core\n"
+    for i, percentage in enumerate(psutil.cpu_percent(percpu=True)):
+        softw += f"Core {i}  : {percentage}%\n"
+    softw += "Total CPU Usage\n"
+    softw += f"Semua Core: {psutil.cpu_percent()}%\n"
+
+    softw += "\nBandwith Digunakan\n"
+    softw += f"Unggah  : {get_size(psutil.net_io_counters().bytes_sent)}\n"
+    softw += f"Download: {get_size(psutil.net_io_counters().bytes_recv)}\n"
+
+    svmem = psutil.virtual_memory()
+    softw += "\nMemori Digunakan\n"
+    softw += f"Total     : {get_size(svmem.total)}\n"
+    softw += f"available : {get_size(svmem.available)}\n"
+    softw += f"Used      : {get_size(svmem.used)}\n"
+    softw += f"Percentage: {svmem.percent}%\n"
+
+    await xx.edit(f"<b>{softw}</b>")
+    
+async def vps(client, callback_query):
+    uname = platform.uname()
+    softw = "Informasi Sistem\n"
+    softw += f"Sistem   : {uname.system}\n"
+    softw += f"Rilis    : {uname.release}\n"
+    softw += f"Versi    : {uname.version}\n"
+    softw += f"Mesin    : {uname.machine}\n"
+
+    boot_time_timestamp = psutil.boot_time()
+
+    bt = datetime.fromtimestamp(boot_time_timestamp)
+    softw += f"Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}\n"
+
+    softw += "\nInformasi CPU\n"
+    softw += "Physical cores   : " + str(psutil.cpu_count(logical=False)) + "\n"
+    softw += "Total cores      : " + str(psutil.cpu_count(logical=True)) + "\n"
+    cpufreq = psutil.cpu_freq()
+    softw += f"Max Frequency    : {cpufreq.max:.2f}Mhz\n"
+    softw += f"Min Frequency    : {cpufreq.min:.2f}Mhz\n"
+    softw += f"Current Frequency: {cpufreq.current:.2f}Mhz\n\n"
+    softw += "CPU Usage Per Core\n"
+    for i, percentage in enumerate(psutil.cpu_percent(percpu=True)):
+        softw += f"Core {i}  : {percentage}%\n"
+    softw += "Total CPU Usage\n"
+    softw += f"Semua Core: {psutil.cpu_percent()}%\n"
+
+    softw += "\nBandwith Digunakan\n"
+    softw += f"Unggah  : {get_size(psutil.net_io_counters().bytes_sent)}\n"
+    softw += f"Download: {get_size(psutil.net_io_counters().bytes_recv)}\n"
+
+    svmem = psutil.virtual_memory()
+    softw += "\nMemori Digunakan\n"
+    softw += f"Total     : {get_size(svmem.total)}\n"
+    softw += f"available : {get_size(svmem.available)}\n"
+    softw += f"Used      : {get_size(svmem.used)}\n"
+    softw += f"Percentage: {svmem.percent}%\n"
+
+    msg = await client.send_message(callback_query.from_user.id, f"<b>{softw}</b>")
+    await asyncio.sleep(15)
+    return await msg.delete()
+    
 async def evalator_cmd(client, message):
     if not get_arg(message):
         return
