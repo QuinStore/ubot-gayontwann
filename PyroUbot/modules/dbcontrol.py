@@ -6,7 +6,11 @@ from PyroUbot import *
 async def _(client, message):
     await prem_user(client, message)
 
-
+@PY.BOT("cekuser", FILTERS.OWNER)
+@PY.UBOT("cekuser", FILTERS.ME_OWNER)
+async def _(client, message):
+    await jumlah_user(client, message)
+    
 @PY.BOT("unprem", FILTERS.OWNER)
 @PY.UBOT("unprem", FILTERS.ME_OWNER)
 async def _(client, message):
