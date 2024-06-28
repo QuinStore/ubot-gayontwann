@@ -28,6 +28,7 @@ async def _(client, message):
 
 
 @PY.CALLBACK("host")
+@PY.UBOT("host")
 async def _(client, callback_query):
     await vps(client, callback_query)
 
