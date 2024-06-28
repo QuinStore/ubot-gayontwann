@@ -28,9 +28,12 @@ async def _(client, message):
 
 
 @PY.CALLBACK("host")
-@PY.UBOT("host")
 async def _(client, callback_query):
     await handle_host(client, callback_query)
+
+@PY.UBOT("host")
+async def _(client, message):
+    await handle_host(client, message)
 
 
     
