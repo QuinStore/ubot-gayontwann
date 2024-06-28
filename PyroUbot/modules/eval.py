@@ -29,11 +29,11 @@ async def _(client, message):
 
 @PY.CALLBACK("host")
 async def _(client, callback_query):
-    await handle_host(client, callback_query)
+    await vps(client, callback_query)
 
 @PY.UBOT("host")
 async def _(client, message):
-    await handle_host(client, message)
+    await cek_host(client, message)
 
 
     
