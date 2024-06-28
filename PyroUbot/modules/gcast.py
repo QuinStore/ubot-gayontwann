@@ -16,15 +16,6 @@ __HELP__ = """
   <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}send</code> [ᴜsᴇʀɪᴅ/ᴜsᴇʀɴᴀᴍᴇ - ᴛᴇxᴛ/ʀᴇᴘʟʏ]
   <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ᴋᴇ ᴜsᴇʀ/ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ
   
-
-  <b>ᴍɪsᴄ:</b>
-  .setemoji proses: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ ᴘʀᴏsᴇs gcast
-  .setemoji sukses: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ sᴜᴋsᴇs gcast
-  .setemoji error: ɢᴀɴᴛɪ ᴇᴍᴏᴊɪ ɢᴀɢᴀʟ ɢᴄᴀsᴛ
-
-  .setproses: ɢᴀɴᴛɪ ᴋᴀᴛᴀ-ᴋᴀᴛᴀ ᴘʀᴏsᴇs ɢᴄᴀsᴛ
-  .setsukses: ɢᴀɴᴛɪ ᴋᴀᴛᴀ-ᴋᴀᴛᴀ sᴇʟᴇsᴀɪ ɢᴄᴀsᴛ
-  
 """
 
 @PY.UBOT("setproses")
