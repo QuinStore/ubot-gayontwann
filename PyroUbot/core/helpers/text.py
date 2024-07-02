@@ -39,7 +39,7 @@ class MSG:
 🧑‍💻 ᴍᴏᴅᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a>
 
 🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
-• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ᴡᴀɴɴꜰʏʏ</a> 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>klik sini</a> 
 
 ✅ ɢᴜɴᴀᴋᴀɴʟᴀʜ ᴛᴏᴍʙᴏɪ ᴅɪ ʙᴀᴡᴀʜ ᴅᴇɴɢᴀɴ ʙɪᴊᴀᴋ
 """
@@ -142,3 +142,4 @@ async def sending_user(user_id):
             ),
             disable_web_page_preview=True,
         )
+        
