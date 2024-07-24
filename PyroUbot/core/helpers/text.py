@@ -30,7 +30,7 @@ class MSG:
 💬 @{bot.me.username} ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴅᴀᴘᴀᴛ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ
 
 🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
-• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>𝐐𝐮𝐞𝐞𝐧</a> 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ADMIN</a> 
 
 👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>
 """
@@ -39,7 +39,7 @@ class MSG:
 🧑‍💻 ᴍᴏᴅᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ: <a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a>
 
 🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
-• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>𝐐𝐮𝐞𝐞𝐧</a> 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ADMIN</a> 
 
 ✅ ɢᴜɴᴀᴋᴀɴʟᴀʜ ᴛᴏᴍʙᴏɪ ᴅɪ ʙᴀᴡᴀʜ ᴅᴇɴɢᴀɴ ʙɪᴊᴀᴋ
 """
@@ -52,13 +52,13 @@ class MSG:
 <b>🎟️ ʜᴀʀɢᴀ ᴘᴇʀʙᴜʟᴀɴ: {harga}.000</b>
 
 <b>💳 ᴍᴏᴛᴏᴅᴇ ᴘᴇᴍʙᴀʏᴀʀᴀɴ:</b>
- <b>├ ᴅᴀɴᴀ/ᴏᴠᴏ</b>
- <b>├────• <code>085184965402</code></b>
+ <b>├ ᴅᴀɴᴀ</b>
+ <b>├────• <code>082299596662</code></b>
 <b>🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: ʀᴘ {total}.000</b>
 <b>🗓️ ᴛᴏᴛᴀʟ ʙᴜʟᴀɴ: {bulan}</b> 
 
  🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
-• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>𝐐𝐮𝐞𝐞𝐧</a> 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ADMIN</a> 
 
 <b>✅ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴋᴏɴꜰɪʀᴍᴀsɪ ᴜɴᴛᴜᴋ ᴋɪʀɪᴍ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ</b>
 """
