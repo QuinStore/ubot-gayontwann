@@ -20,7 +20,7 @@ async def help_cmd(client, message):
                 HELP_COMMANDS[get_arg(message)].__HELP__.format(
                     next((p) for p in prefix)
                 )
-                + '\n<b><a href="tg://user?id=1344553362">© 𝐮𝐬𝐞𝐫 𝐛𝐨𝐭 𝐩𝐫𝐞𝐦𝐢𝐮𝐦</a> </b>',
+                + '\n<b><a href="tg://user?id=1344553362">© ᴜʙᴏᴛ ᴠ1</a> </b>',
                 quote=True,
             )
         else:
@@ -30,7 +30,7 @@ async def help_cmd(client, message):
 
 
 async def menu_inline(client, inline_query):
-    msg = f"<b>✣ ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={inline_query.from_user.id}>{inline_query.from_user.first_name} {inline_query.from_user.last_name or ''}</a>\n\n★ ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}</b>"
+    msg = f"<b>🥳 ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={inline_query.from_user.id}>{inline_query.from_user.first_name} {inline_query.from_user.last_name or ''}</a>\n\n★ ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}</b>"
     await client.answer_inline_query(
         inline_query.id,
         cache_time=60,
@@ -53,14 +53,14 @@ async def menu_callback(client, callback_query):
     prev_match = re.match(r"help_prev\((.+?)\)", callback_query.data)
     next_match = re.match(r"help_next\((.+?)\)", callback_query.data)
     back_match = re.match(r"help_back", callback_query.data)
-    top_text = f"<b>✣ ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={callback_query.from_user.id}>{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}</a>\n\n► ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}</b>"
+    top_text = f"<b>🥳 ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={callback_query.from_user.id}>{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}</a>\n\n► ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}</b>"
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
         prefix = await ubot.get_prefix(callback_query.from_user.id)
         text = HELP_COMMANDS[module].__HELP__.format(next((p) for p in prefix))
         button = [[InlineKeyboardButton("• ᴋᴇᴍʙᴀʟɪ •", callback_data="help_back")]]
         await callback_query.edit_message_text(
-            text=text + '\n<b><a href="tg://user?id=1344553362">© 𝐮𝐬𝐞𝐫 𝐛𝐨𝐭 𝐩𝐫𝐞𝐦𝐢𝐮𝐦</a> </b>',
+            text=text + '\n<b><a href="tg://user?id=1344553362">© ᴜʙᴏᴛ ᴠ1</a> </b>',
             reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
